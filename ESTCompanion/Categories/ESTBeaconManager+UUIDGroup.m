@@ -105,6 +105,14 @@ static char kAssociatedRegionKey;
 }
 
 
+-(void)stopRangingBeaconsInRegion {
+    ESTBeaconRegion *region = [self associatedRegion];
+    if( region ) {
+        [self stopRangingBeaconsInRegion:region];
+        [self setAssociatedRegion:nil];
+    }
+}
+
 #pragma mark - Yuck...
 
 /**
