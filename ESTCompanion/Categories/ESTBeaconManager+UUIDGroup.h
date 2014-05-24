@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 DataOCD. All rights reserved.
 //
 
+// WIP!
+
 #import "ESTBeaconManager.h"
 
 /**
