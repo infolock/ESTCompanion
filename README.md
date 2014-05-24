@@ -22,8 +22,8 @@ static NSString * const DEFAULT_IDENTIFIER = @"estimoteIdentifier";
 
     [super viewDidAppear:animated];
 
-        self.beaconManager = [[ESTBeaconManager alloc] initWithOptions:kUUIDGroupInitOptionsAvoidUnknownStateBeacons | kUUIDGroupInitOptionsStartRangingImmediately 
-                                                              delegate:self];
+    self.beaconManager = [[ESTBeaconManager alloc] initWithOptions:kUUIDGroupInitOptionsAvoidUnknownStateBeacons | kUUIDGroupInitOptionsStartRangingImmediately 
+                                                          delegate:self];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
