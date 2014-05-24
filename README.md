@@ -76,3 +76,7 @@ Quick Breakdown:
     * `kUUIDGroupSortByMajorMinor` - Sort by Major Value with the Minor Value being used for siblings having the same Major value
 
 Checkout `ESTBeaconManager+UUIDGroup.h` for more.
+
+
+## License
+See `LICENSE` included with this repo.  Long story short - I'm a dev, you're a dev - we all make great stuff that works, but we also make shitty stuff that breaks...
