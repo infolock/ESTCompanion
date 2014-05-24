@@ -8,7 +8,7 @@ ESTCompanion
 ### ESTBeaconManager+UUIDGroup
 This is a small category to just make setting up the ESTBeaconManager easier for when we want to start ranging for estimote beacons.
 
-**Example Usage (.m file )**
+**Very Simple Example of Usage (.m file )**
 ```objc
 
 #import "ESTBeaconManager+UUIDGroup.h"
@@ -45,3 +45,34 @@ static NSString * const DEFAULT_IDENTIFIER = @"estimoteIdentifier";
 }
 
 ```
+
+So what's so special about this?
+* No need for the ESTBeaconRegion property ( see details in sibling points below )
+* No need to create an instance of the ESTBeaconRegion
+* Ranging Starts Immediately without a need to do so ( this is optional of course, but is what I wanted/needed )
+* When getting an instnace of the ESTBeaconManager, we can also (optionally) set ourselves as the delegate, and also turn on some properties immediately without having to issue calls for each of them
+
+All of the above is achieved with 1 init call, and a single delegate method ( which is not going to even be necessary soon enough ).
+
+
+#### Extras included
+There are (quite a few) initialization points available for this guy too by means of `NS_OPTIONS`/`NS_ENUM` to keep things simple and yet expressive.
+
+Quick Breakdown:
+* `typedef NS_OPTIONS(NSUInteger, kUUIDGroupInitOptions)`
+  * Available Options: 
+    * `kUUIDGroupInitOptionsNone` - Nothing extra done - same as not even using this guy ( :~( )
+    * `kUUIDGroupInitOptionsAvoidUnknownStateBeacons` - Enables the ESTBeaconManager property `avoidUnknownStateBeacons` ( sets to YES )
+    * `kUUIDGroupInitOptionsStartRangingImmediately` - Discussed above.  Short Answer - removes boiler plate code for ranging.
+* `typedef NS_ENUM(NSInteger, kUUIDGroupBy)`
+  * Available Options: 
+    * `kUUIDGroupByNone`  - Default ( 2D array containing only beacons with a specific UUID )
+    * `kUUIDGroupByMajor` - Group all by the MAJOR value
+    * `kUUIDGroupByCLProximity` - Group all by CLProximity ( keys will be: immediate, near, far, unknown )
+* `typedef NS_ENUM(NSUInteger, kUUIDGroupSortBy)`
+  * Available Options: 
+    * `kUUIDGroupSortByDefault` - Default ( esimote defaults this array to be sorted by closest proximity/distance )
+    * `kUUIDGroupSortByCLProximity` - Sort by CLProximity ( immediate -> near -> far -> unknown ) *WIP*
+    * `kUUIDGroupSortByMajorMinor` - Sort by Major Value with the Minor Value being used for siblings having the same Major value
+
+Checkout `ESTBeaconManager+UUIDGroup.h` for more.
