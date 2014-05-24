@@ -51,11 +51,11 @@ typedef NS_OPTIONS(NSUInteger, kUUIDGroupInitOptions) {
 /**
  * Initialize without any initOptions
  */
--(instancetype)initWithDelegate:(id <ESTBeaconManagerUUIDGroupDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy sortBy:(kUUIDGroupSortBy)sortBy;
+-(instancetype)initWithDelegate:(id <ESTBeaconManagerDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy sortBy:(kUUIDGroupSortBy)sortBy;
 // Companions
--(instancetype)initWithDelegate:(id <ESTBeaconManagerUUIDGroupDelegate>)delegate;
--(instancetype)initWithDelegate:(id <ESTBeaconManagerUUIDGroupDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy;
--(instancetype)initWithDelegate:(id <ESTBeaconManagerUUIDGroupDelegate>)delegate sortBy:(kUUIDGroupSortBy)sortBy;
+-(instancetype)initWithDelegate:(id <ESTBeaconManagerDelegate>)delegate;
+-(instancetype)initWithDelegate:(id <ESTBeaconManagerDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy;
+-(instancetype)initWithDelegate:(id <ESTBeaconManagerDelegate>)delegate sortBy:(kUUIDGroupSortBy)sortBy;
 
 
 /**
@@ -66,11 +66,10 @@ typedef NS_OPTIONS(NSUInteger, kUUIDGroupInitOptions) {
  * @param kUUIDGroupBy                 groupBy      ( required )
  * @param kUUIDGroupSortBy             sortBy       ( required )
  */
--(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerUUIDGroupDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy sortBy:(kUUIDGroupSortBy)sortBy;
+-(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy sortBy:(kUUIDGroupSortBy)sortBy;
 // Companions
--(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerUUIDGroupDelegate>)delegate;
--(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerUUIDGroupDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy;
--(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerUUIDGroupDelegate>)delegate sortBy:(kUUIDGroupSortBy)sortBy;
-
+-(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerDelegate>)delegate;
+-(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy;
+-(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerDelegate>)delegate sortBy:(kUUIDGroupSortBy)sortBy;
 
 @end
