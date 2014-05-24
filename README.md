@@ -44,6 +44,8 @@ static NSString * const DEFAULT_IDENTIFIER = @"estimoteIdentifier";
     return @[ ESTIMOTE_PROXIMITY_UUID, DEFAULT_BEACON_IDENTIFIER ];
 }
 
+@end
+
 ```
 
 So what's so special about this?
