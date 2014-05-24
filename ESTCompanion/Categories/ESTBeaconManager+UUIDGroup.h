@@ -74,4 +74,6 @@ typedef NS_OPTIONS(NSUInteger, kUUIDGroupInitOptions) {
 -(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy;
 -(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerDelegate>)delegate sortBy:(kUUIDGroupSortBy)sortBy;
 
+-(void)stopRangingBeaconsInRegion;
+
 @end
