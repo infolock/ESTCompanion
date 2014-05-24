@@ -149,16 +149,4 @@ static char kAssociatedRegionKey;
     return [[self class] stringFromProximity:proximity];
 }
 
-+(void)storeBeaconInfo {
-
-    NSMutableArray *itemsDataArray = [NSMutableArray array];
-    for (RWTItem *item in self.items) {
-        NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:item];
-        [itemsDataArray addObject:itemData];
-    }
-    [[NSUserDefaults standardUserDefaults] setObject:itemsDataArray forKey:kRWTStoredItemsKey];
-
-    return nil;
-}
-
 @end
