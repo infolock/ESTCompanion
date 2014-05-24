@@ -106,8 +106,8 @@ static char kAssociatedRegionKey;
     return uuidIdentifierArray && [uuidIdentifierArray count] == 2 && [uuidIdentifierArray[0] isKindOfClass:[NSUUID class]] && [uuidIdentifierArray[1] isKindOfClass:[NSString class]];
 }
 
-
 -(void)stopRangingBeaconsInRegion {
+
     ESTBeaconRegion *region = [self associatedRegion];
     if( region ) {
         [self stopRangingBeaconsInRegion:region];
@@ -128,6 +128,37 @@ static char kAssociatedRegionKey;
 
 -(ESTBeaconRegion *)associatedRegion {
     return objc_getAssociatedObject( self, &kAssociatedRegionKey);
+}
+
+#pragma mark -
+#pragma mark Static/Category Helper Methods
+#pragma mark -
+
+// Get the string representation of a given CLProximity
++(NSString *)stringFromProximity:(CLProximity)proximity {
+    switch (proximity) {
+        case CLProximityImmediate: return @"Immediate";
+        case CLProximityNear: return @"Near";
+        case CLProximityFar: return @"Far";
+        case CLProximityUnknown: default: return @"Unknown";
+    }
+}
+
+// convenience method for stringFromProximity ( seeing a lot of people using it this way )
++(NSString *)nameFromProximity:(CLProximity)proximity {
+    return [[self class] stringFromProximity:proximity];
+}
+
++(void)storeBeaconInfo {
+
+    NSMutableArray *itemsDataArray = [NSMutableArray array];
+    for (RWTItem *item in self.items) {
+        NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:item];
+        [itemsDataArray addObject:itemData];
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:itemsDataArray forKey:kRWTStoredItemsKey];
+
+    return nil;
 }
 
 @end

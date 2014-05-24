@@ -39,7 +39,7 @@ typedef NS_ENUM(NSUInteger, kUUIDGroupSortBy) {
 };
 
 /**
- * Options to
+ * Options for turning on/off specific properties/settings/actions during init
  */
 typedef NS_OPTIONS(NSUInteger, kUUIDGroupInitOptions) {
     kUUIDGroupInitOptionsNone = 0,
@@ -75,5 +75,11 @@ typedef NS_OPTIONS(NSUInteger, kUUIDGroupInitOptions) {
 -(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerDelegate>)delegate sortBy:(kUUIDGroupSortBy)sortBy;
 
 -(void)stopRangingBeaconsInRegion;
+
+
+// Static/Category Methods
+
++(NSString *)stringFromProximity:(CLProximity)proximity;
++(NSString *)nameFromProximity:(CLProximity)proximity;
 
 @end
