@@ -118,5 +118,5 @@ Here is a small compilation of good resources, information and repositories rela
 * [EstimoteEditor](https://github.com/ygini/EstimoteEditor) - github repo
 * [HiBeacons](https://github.com/nicktoumpelis/HiBeacons) - github repo
 
-## License
+# License
 See `LICENSE` included with this repo.  Long story short - I'm a dev, you're a dev - we all make great stuff that works, but we also make shitty stuff that breaks...
