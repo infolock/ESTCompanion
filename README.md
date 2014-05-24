@@ -57,7 +57,7 @@ So what's so special about this?
 All of the above is achieved with 1 init call, and a single delegate method ( which is not going to even be necessary soon enough ).
 
 
-#### Extras included
+##### Extras included
 There are (quite a few) initialization points available for this guy too by means of `NS_OPTIONS`/`NS_ENUM` to keep things simple and yet expressive.
 
 Quick Breakdown:
@@ -78,6 +78,28 @@ Quick Breakdown:
     * `kUUIDGroupSortByMajorMinor` - Sort by Major Value with the Minor Value being used for siblings having the same Major value
 
 Checkout `ESTBeaconManager+UUIDGroup.h` for more.
+
+
+### ESTBeaconManager+BeaconStore
+This category is simply a way to persist iBeacons found/altered during ranging to the `NSUserDefaults`.  The catch 22 to this is that the [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK) already allows you to save that information to the actual iBeacons - which is not what this is attempting to solve/duplicate ( unless you actually want to that is... ).  The whole point behind this category is to allow you to store extra information about a beacon - such as the notification message you applied to a Zone event, or the physical location of the beacon, its identifier/name, etc...
+
+This is just a generic first attempt at it - will refactor/expand on this as the use cases arise.  The hope is to allow support to multiple stores ( `NSUserDefaults`, `Core Data`, remote, etc. )
+
+#### Methods
+* Methods that specify the storageType(s) by using `kBeaconStoreTypes`:
+  * `+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes`
+  * `+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes withStorageKeyName:(NSString *)keyName`
+  * +(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType;
+  * +(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType usingStorageKeyName:(NSString *)keyName;
+* Methods that work with `NSUserDefaults`:
+  * `+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons`
+  * `+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons withStorageKeyName:(NSString *)keyName`
+  * `+(NSArray *)retrieveBeaconsFromNSUserDefaults`
+  * `+(NSArray *)retrieveBeaconsFromNSUserDefaultsUsingKeyWithName:(NSString *)keyName`
+
+#### Extras
+`typedef NS_ENUM( NSUInteger, kBeaconStoreInfo )` - Used to specify the storage type(s) to use when retrieving/saving beacons ( `kBeaconStoreInfoDefaultKeyName` is the only supported key right now.. )
+
 
 
 ## License
