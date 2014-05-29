@@ -59,6 +59,18 @@ This Category is influenced by the [iBeacon Article on Ray Wenderlich's site](ht
 Checkout `ESTBeaconManager+BeaconStore.h` for more.
 
 
+# iBeacon Information/Resources
+Here is a small compilation of good resources, information and repositories relating to iBeacons.
+
+* [Estimote IOS-SDK](https://github.com/Estimote/iOS-SDK) - github repo
+* [BEEKN](http://beekn.net) - Amazing site with all *kinds* of information relating to iBeacons
+* [Developing iOS 7 Applications with iBeacons Tutorial](http://www.raywenderlich.com/66584/ios7-ibeacons-tutorial) - Ray Wenderlich
+* [iBeacons Tutorial for iOS 7 with CLBeaconRegion and CLBeacon](http://www.devfright.com/ibeacons-tutorial-ios-7-clbeaconregion-clbeacon/) - DEVFRIGHT
+* [A Closer Look at the CLLocationManagerDelegate](http://www.devfright.com/a-closer-look-at-the-cllocationmanagerdelegate/) - DEVFRIGHT
+* [EstimoteEditor](https://github.com/ygini/EstimoteEditor) - github repo
+* [HiBeacons](https://github.com/nicktoumpelis/HiBeacons) - github repo
+
+
 # Included Example
 The included example is nothing special.  It is just a basic example showing how to use some of the features available.  Currently, it only shows how ot use the `GroupUUID` category.
 
@@ -81,17 +93,6 @@ Here is a screenshot for the curious:
 * Add block support to some other things
 * Add background routines for doing some work ( like updates and whatever ) with a single line.
 * etc. etc.  that's enough as to not overwhelm myself for now.
-
-# iBeacon Information/Resources
-Here is a small compilation of good resources, information and repositories relating to iBeacons.
-
-* [Estimote IOS-SDK](https://github.com/Estimote/iOS-SDK) - github repo
-* [BEEKN](http://beekn.net) - Amazing site with all *kinds* of information relating to iBeacons
-* [Developing iOS 7 Applications with iBeacons Tutorial](http://www.raywenderlich.com/66584/ios7-ibeacons-tutorial) - Ray Wenderlich
-* [iBeacons Tutorial for iOS 7 with CLBeaconRegion and CLBeacon](http://www.devfright.com/ibeacons-tutorial-ios-7-clbeaconregion-clbeacon/) - DEVFRIGHT
-* [A Closer Look at the CLLocationManagerDelegate](http://www.devfright.com/a-closer-look-at-the-cllocationmanagerdelegate/) - DEVFRIGHT
-* [EstimoteEditor](https://github.com/ygini/EstimoteEditor) - github repo
-* [HiBeacons](https://github.com/nicktoumpelis/HiBeacons) - github repo
 
 # License
 See `LICENSE` included with this repo.  Long story short - I'm a dev, you're a dev - we all make great stuff that works, but we also make shitty stuff that breaks...
