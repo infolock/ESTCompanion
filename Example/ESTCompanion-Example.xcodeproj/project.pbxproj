@@ -118,11 +118,11 @@
 				0546E5C01936E66A00EFDF9F /* ViewController.h */,
 				0546E5C11936E66A00EFDF9F /* ViewController.m */,
 				0546E5951936E56200EFDF9F /* Main.storyboard */,
-				0546E5921936E56200EFDF9F /* estcompAppDelegate.h */,
-				0546E5931936E56200EFDF9F /* estcompAppDelegate.m */,
-				0546E59B1936E56200EFDF9F /* Images.xcassets */,
 				0546E5D51936ED8900EFDF9F /* beaconTableViewCell.h */,
 				0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */,
+				0546E59B1936E56200EFDF9F /* Images.xcassets */,
+				0546E5921936E56200EFDF9F /* estcompAppDelegate.h */,
+				0546E5931936E56200EFDF9F /* estcompAppDelegate.m */,
 			);
 			path = "ESTCompanion-Example";
 			sourceTree = "<group>";
