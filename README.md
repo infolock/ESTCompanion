@@ -59,6 +59,14 @@ This Category is influenced by the [iBeacon Article on Ray Wenderlich's site](ht
 Checkout `ESTBeaconManager+BeaconStore.h` for more.
 
 
+# Included Example
+The included example is nothing special.  It is just a basic example showing how to use some of the features available.  Currently, it only shows how ot use the `GroupUUID` category.
+
+Here is a screenshot for the curious:
+
+![ScreenShot 1](/example_ss.png)
+
+
 # iBeacon Information/Resources
 Here is a small compilation of good resources, information and repositories relating to iBeacons.
 
