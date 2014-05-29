@@ -79,10 +79,10 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999966" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izw-cv-esN">
-                                <rect key="frame" x="98" y="446" width="217" height="28"/>
+                                <rect key="frame" x="150" y="446" width="165" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="ESTBeacon">
+                                    <fragment content="EST">
                                         <attributes>
                                             <color key="NSColor" red="0.83137255909999996" green="0.5647059083" blue="0.34901961679999999" alpha="1" colorSpace="deviceRGB"/>
                                             <font key="NSFont" size="24" name="HelveticaNeue"/>
@@ -92,7 +92,7 @@
                                     <fragment content="Companion">
                                         <attributes>
                                             <color key="NSColor" red="0.34509804844856262" green="0.60784316062927246" blue="0.58431375026702881" alpha="1" colorSpace="deviceRGB"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-LightItalic"/>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-LightItalic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
