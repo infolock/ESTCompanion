@@ -40,7 +40,7 @@ So what's so special about this?
 * No need for the ESTBeaconRegion property ( see details in sibling points below )
 * No need to create an instance of the ESTBeaconRegion
 * Optionally Start Ranging Immediately as you init the ESTBeaconManager
-* Optionally set ourselves as the delegate, and also turn on some common properties during init ('NS_OPTIONS')
+* Optionally set ourselves as the delegate, and also turn on some common properties during init ('NS_OPTIONS') while we are at it
 * etc.
 
 All of the above is achieved with 1 init call, and a single delegate method ( which is not going to even be necessary soon enough ).
