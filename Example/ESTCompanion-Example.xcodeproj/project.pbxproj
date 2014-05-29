@@ -113,16 +113,13 @@
 		0546E5891936E56200EFDF9F /* ESTCompanion-Example */ = {
 			isa = PBXGroup;
 			children = (
-				0546E5B81936E63100EFDF9F /* ESTCompanion */,
-				0546E58A1936E56200EFDF9F /* Supporting Files */,
-				0546E5C01936E66A00EFDF9F /* ViewController.h */,
-				0546E5C11936E66A00EFDF9F /* ViewController.m */,
+				0546E5D91937097300EFDF9F /* Classes */,
+				0546E5D81937096300EFDF9F /* Controllers */,
 				0546E5951936E56200EFDF9F /* Main.storyboard */,
-				0546E5D51936ED8900EFDF9F /* beaconTableViewCell.h */,
-				0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */,
-				0546E59B1936E56200EFDF9F /* Images.xcassets */,
 				0546E5921936E56200EFDF9F /* estcompAppDelegate.h */,
 				0546E5931936E56200EFDF9F /* estcompAppDelegate.m */,
+				0546E59B1936E56200EFDF9F /* Images.xcassets */,
+				0546E58A1936E56200EFDF9F /* Supporting Files */,
 			);
 			path = "ESTCompanion-Example";
 			sourceTree = "<group>";
@@ -131,9 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				0546E58B1936E56200EFDF9F /* ESTCompanion-Example-Info.plist */,
+				0546E5911936E56200EFDF9F /* ESTCompanion-Example-Prefix.pch */,
 				0546E58C1936E56200EFDF9F /* InfoPlist.strings */,
 				0546E58F1936E56200EFDF9F /* main.m */,
-				0546E5911936E56200EFDF9F /* ESTCompanion-Example-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -176,6 +173,33 @@
 				0546E5CB1936E7F800EFDF9F /* ESTBeaconUpdateInfo.h */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		0546E5D81937096300EFDF9F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0546E5DA1937098C00EFDF9F /* Cell */,
+				0546E5C01936E66A00EFDF9F /* ViewController.h */,
+				0546E5C11936E66A00EFDF9F /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0546E5D91937097300EFDF9F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0546E5B81936E63100EFDF9F /* ESTCompanion */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		0546E5DA1937098C00EFDF9F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0546E5D51936ED8900EFDF9F /* beaconTableViewCell.h */,
+				0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
