@@ -22,7 +22,7 @@ This is a small category to just make setting up the ESTBeaconManager easier for
 So what's so special about this?
 * No need for the ESTBeaconRegion property ( see details in sibling points below )
 * No need to create an instance of the ESTBeaconRegion
-* Ranging Starts Immediately without a need to do so ( this is optional of course, but is what I wanted/needed )
+* Optionally Start Ranging Starts Immediately (rather than manually yourself)
 * When getting an instnace of the ESTBeaconManager, we can also (optionally) set ourselves as the delegate, and also turn on some properties immediately without having to issue calls for each of them
 
 All of the above is achieved with 1 init call, and a single delegate method ( which is not going to even be necessary soon enough ).
