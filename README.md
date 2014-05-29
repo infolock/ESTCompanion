@@ -43,7 +43,8 @@ So what's so special about this?
 * Optionally set ourselves as the delegate, and also turn on some common properties during init ('NS_OPTIONS') while we are at it
 * etc.
 
-All of the above is achieved with 1 init call, and a single delegate method ( which is not going to even be necessary soon enough ).
+All of the above is achieved with 1 init call, and a single delegate method.  As to not turn this into a Billy Mays infomercial here, the downside is that there isnt much else yet either.  Its a work i. progress though and shoulld grow pretty quickly from here on out. 
+
 
 ##### More Information
 There are (quite a few) initialization points available for this guy too by means of `NS_OPTIONS`/`NS_ENUM` to keep things simple and yet expressive.
