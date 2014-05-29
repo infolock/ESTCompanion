@@ -3,7 +3,8 @@ ESTCompanion
 
 (WIP) - Finding there are some boiler plate setup stuff for working with [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK).  To make life easier, created some ways to avoid all the boiler plate setup.  Contributors needed!
 
-Quick links to get you where you wanna go:  
+Document Outline
+===
 [Requirements](#requirements)  
 [Installation](#installation)  
 [Categories](#categories)  
