@@ -3,50 +3,16 @@ ESTCompanion
 
 (WIP) - Finding there are some boiler plate setup stuff for working with [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK).  To make life easier, created some ways to avoid all the boiler plate setup.  Contributors needed!
 
+# Requirements
+[Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK) - see their README for installation instructions
+
+> Note: the EstimoteSDK found within the Example may or may not be current.  You should not rely on it being the latest/greatest - rely on the link above instead!
 
 # Categories
 ### ESTBeaconManager+UUIDGroup
 This is a small category to just make setting up the ESTBeaconManager easier for when we want to start ranging for estimote beacons.
 
-**Very Simple Example of Usage (.m file )**
-```objc
-
-#import "ESTBeaconManager+UUIDGroup.h"
-
-static NSString * const DEFAULT_IDENTIFIER = @"estimoteIdentifier";
-
-// Note: We're using the ESTBeaconManagerUUIDGroupDelegate here because we want to range immediately.  Otherwise, just use the default ESTBeaconManagerDelegate instead...
-@interface ViewController () <ESTBeaconManagerUUIDGroupDelegate>
-
--(void)viewDidAppear:(BOOL)animated {
-
-    [super viewDidAppear:animated];
-
-    self.beaconManager = [[ESTBeaconManager alloc] initWithOptions:kUUIDGroupInitOptionsAvoidUnknownStateBeacons | kUUIDGroupInitOptionsStartRangingImmediately 
-                                                          delegate:self];
-}
-
--(void)viewWillDisappear:(BOOL)animated {
-
-    [super viewWillDisappear:animated];
-    [self.beaconManager stopRangingBeaconsInRegion];
-}
-
-// This become a completion block instead soon - for now, just using it as is...
--(void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region {
-    self.beaconsArray = beacons;
-    NSLog( @"wh00t - beacons : %@", beacons );
-}
-
-// This is ONLY needed if we are wanting to range immediately - in which case we have to be a ESTBeaconManagerUUIDGroupDelegate to do so...
--(NSArray *)ESTBeaconManagerDelegateShouldReturnUUIDIdentifierArray {
-    // The order is import here for now as it is still a WIP.  For now, it is what it is.
-    return @[ ESTIMOTE_PROXIMITY_UUID, DEFAULT_BEACON_IDENTIFIER ];
-}
-
-@end
-
-```
+> Checkout the Example for a very simple usage example
 
 So what's so special about this?
 * No need for the ESTBeaconRegion property ( see details in sibling points below )
@@ -64,47 +30,28 @@ All of the above is achieved with 1 init call, and a single delegate method ( wh
 ##### Extras included
 There are (quite a few) initialization points available for this guy too by means of `NS_OPTIONS`/`NS_ENUM` to keep things simple and yet expressive.
 
-Quick Breakdown:
-* `typedef NS_OPTIONS(NSUInteger, kUUIDGroupInitOptions)`
-  * Available Options: 
-    * `kUUIDGroupInitOptionsNone` - Nothing extra done - same as not even using this guy ( :~( )
-    * `kUUIDGroupInitOptionsAvoidUnknownStateBeacons` - Enables the ESTBeaconManager property `avoidUnknownStateBeacons` ( sets to YES )
-    * `kUUIDGroupInitOptionsStartRangingImmediately` - Discussed above.  Short Answer - removes boiler plate code for ranging.
-* `typedef NS_ENUM(NSInteger, kUUIDGroupBy)`
-  * Available Options: 
-    * `kUUIDGroupByNone`  - Default ( 2D array containing only beacons with a specific UUID )
-    * `kUUIDGroupByMajor` - Group all by the MAJOR value
-    * `kUUIDGroupByCLProximity` - Group all by CLProximity ( keys will be: immediate, near, far, unknown )
-* `typedef NS_ENUM(NSUInteger, kUUIDGroupSortBy)`
-  * Available Options: 
-    * `kUUIDGroupSortByDefault` - Default ( esimote defaults this array to be sorted by closest proximity/distance )
-    * `kUUIDGroupSortByCLProximity` - Sort by CLProximity ( immediate -> near -> far -> unknown ) *WIP*
-    * `kUUIDGroupSortByMajorMinor` - Sort by Major Value with the Minor Value being used for siblings having the same Major value
-
 Checkout `ESTBeaconManager+UUIDGroup.h` for more.
 
 
 ### ESTBeaconManager+BeaconStore
-This category is simply a way to persist iBeacons found/altered during ranging to the `NSUserDefaults`.  The catch 22 to this is that the [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK) already allows you to save that information to the actual iBeacons - which is not what this is attempting to solve/duplicate ( unless you actually want to that is... ).  The whole point behind this category is to allow you to store extra information about a beacon - such as the notification message you applied to a Zone event, or the physical location of the beacon, its identifier/name, etc...
+This category is simply a way to persist iBeacons found/altered during ranging to the `NSUserDefaults`.  The catch 22 to this is that the [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK) already allows you to save that information to the actual iBeacons - which is not what this is attempting to solve/duplicate ( unless you actually want to that is... ).  This is just a easy way to store more information about them.
 
-This is just a generic first attempt at it - will refactor/expand on this as the use cases arise.  The hope is to allow support to multiple stores ( `NSUserDefaults`, `Core Data`, remote, etc. ).
+*This is just a generic first attempt at it - will refactor/expand on this as the use cases arise.  The hope is to allow support to multiple stores ( `NSUserDefaults`, `Core Data`, remote, etc. ).*
 
 This Category is influenced by the [iBeacon Article on Ray Wenderlich's site](http://www.raywenderlich.com/66584/ios7-ibeacons-tutorial).
 
 ##### Methods
-* Methods that specify the storageType(s) by using `kBeaconStoreTypes`:
-  * `+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes`
-  * `+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes withStorageKeyName:(NSString *)keyName`
-  * `+(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType`
-  * `+(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType usingStorageKeyName:(NSString *)keyName`
-* Methods that work with `NSUserDefaults`:
-  * `+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons`
-  * `+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons withStorageKeyName:(NSString *)keyName`
-  * `+(NSArray *)retrieveBeaconsFromNSUserDefaults`
-  * `+(NSArray *)retrieveBeaconsFromNSUserDefaultsUsingKeyWithName:(NSString *)keyName`
+* `+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes`
+* `+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes withStorageKeyName:(NSString *)keyName`
+* `+(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType`
+* `+(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType usingStorageKeyName:(NSString *)keyName`
+* `+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons`
+* `+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons withStorageKeyName:(NSString *)keyName`
+* `+(NSArray *)retrieveBeaconsFromNSUserDefaults`
+* `+(NSArray *)retrieveBeaconsFromNSUserDefaultsUsingKeyWithName:(NSString *)keyName`
 
-##### Extras
-`typedef NS_ENUM( NSUInteger, kBeaconStoreInfo )` - Used to specify the storage type(s) to use when retrieving/saving beacons ( `kBeaconStoreInfoDefaultKeyName` is the only supported key right now.. )
+##### Extras included
+Checkout `ESTBeaconManager+BeaconStore.h` for more.
 
 
 # iBeacon Information/Resources
