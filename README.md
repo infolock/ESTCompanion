@@ -11,7 +11,7 @@ Document Outline
 * [ESTBeaconManager+UUIDGroup](#uuidgroup)  
 * [ESTBeaconManager+BeaconStore](#beaconstore)  
 
-[iBeacon Information/Resources](#resources)  
+[iBeacon-related Information/Resources](#resources)  
 [Example Code](#example)  
 [@todos](#todos)  
 [License](#license)  
@@ -63,7 +63,7 @@ Checkout `ESTBeaconManager+BeaconStore.h` for more.
 
 
 <a name="resources"/>
-# iBeacon Information/Resources
+# iBeacon-related Information/Resources
 Here is a small compilation of good resources, information and repositories relating to iBeacons.
 
 * [Estimote IOS-SDK](https://github.com/Estimote/iOS-SDK) - github repo
