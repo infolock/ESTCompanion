@@ -8,6 +8,11 @@ ESTCompanion
 
 > Note: the EstimoteSDK found within the Example may or may not be current.  You should not rely on it being the latest/greatest - rely on the link above instead!
 
+
+### Installation
+Pretty simple stuff: Copy the ESTCompanion folder into your project - and its ready for use.
+
+
 # Categories
 ### ESTBeaconManager+UUIDGroup
 This is a small category to just make setting up the ESTBeaconManager easier for when we want to start ranging for estimote beacons.
