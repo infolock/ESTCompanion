@@ -85,7 +85,7 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
     beaconTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
 
-    ESTBeacon *beacon = self.beacons[indexPath.row];
+    ESTBeacon *beacon = self.beacons[(NSUInteger)indexPath.row];
 
     cell.majorLabel.text = [beacon.major stringValue];
     cell.minorLabel.text = [beacon.minor stringValue];
