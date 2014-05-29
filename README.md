@@ -9,6 +9,7 @@ ESTCompanion
 [Categories](#categories)  
 * [ESTBeaconManager+UUIDGroup](#uuidgroup)  
 * [ESTBeaconManager+BeaconStore](#beaconstore)  
+
 [iBeacon Information/Resources](#resources)  
 [Example Code](#example)  
 [@todos](#todos)  
