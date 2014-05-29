@@ -45,12 +45,7 @@ So what's so special about this?
 
 All of the above is achieved with 1 init call, and a single delegate method ( which is not going to even be necessary soon enough ).
 
-##### Methods
-
-* `+(NSString *)stringFromProximity:(CLProximity)proximity` - Returns a string for a given `CLProximity` key
-* `+(NSString *)nameFromProximity:(CLProximity)proximity` - Convenience method for `stringFromProximity` that is being used by others
-
-##### Extras included
+##### More Information
 There are (quite a few) initialization points available for this guy too by means of `NS_OPTIONS`/`NS_ENUM` to keep things simple and yet expressive.
 
 Checkout `ESTBeaconManager+UUIDGroup.h` for more.
@@ -63,17 +58,7 @@ This category is simply a way to persist iBeacons found/altered during ranging t
 
 This Category is influenced by the [iBeacon Article on Ray Wenderlich's site](http://www.raywenderlich.com/66584/ios7-ibeacons-tutorial).
 
-##### Methods
-* `+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes`
-* `+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes withStorageKeyName:(NSString *)keyName`
-* `+(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType`
-* `+(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType usingStorageKeyName:(NSString *)keyName`
-* `+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons`
-* `+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons withStorageKeyName:(NSString *)keyName`
-* `+(NSArray *)retrieveBeaconsFromNSUserDefaults`
-* `+(NSArray *)retrieveBeaconsFromNSUserDefaultsUsingKeyWithName:(NSString *)keyName`
-
-##### Extras included
+##### More Information
 Checkout `ESTBeaconManager+BeaconStore.h` for more.
 
 
