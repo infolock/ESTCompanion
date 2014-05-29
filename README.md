@@ -67,6 +67,8 @@ Here is a screenshot for the curious:
 ![ScreenShot 1](/example_ss.png)
 
 
+*Note* The Example shows Major of 1, and Minors of 1,2,3.  This is not a mistake - I actually applied those minors to my beacons while messing around with their SDK.
+
 # iBeacon Information/Resources
 Here is a small compilation of good resources, information and repositories relating to iBeacons.
 
