@@ -42,7 +42,7 @@
 }
 
 // Get the string representation of a given CLProximity
--(NSString *)stringFromProximity:(CLProximity)proximity {
+-(NSString *)stringFromProximity:(NSInteger)proximity {
     return self.proximityStrings[proximity];
 }
 
