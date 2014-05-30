@@ -9,11 +9,11 @@
 #import "ViewController.h"
 #import "beaconTableViewCell.h"
 
-#import "ESTBeaconManager+UUIDGroup.h"
+#import "ESTBeaconManager+AutoRegioning.h"
 
 static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
-@interface ViewController () <ESTBeaconManagerUUIDGroupDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <ESTBeaconManagerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) ESTBeaconManager *beaconManager;
 @property (nonatomic, copy) NSArray *beacons;
@@ -28,9 +28,10 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 -(void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-
-    self.beaconManager = [[ESTBeaconManager alloc] initWithOptions:kUUIDGroupInitOptionsAvoidUnknownStateBeacons | kUUIDGroupInitOptionsStartRangingImmediately
-                                                          delegate:self];
+    self.beaconManager = [[ESTBeaconManager alloc] initAutoRegioningWithOptions:kUUIDGroupInitOptionsAvoidUnknownStateBeacons
+                                                                       delegate:self
+                                                                  proximityUUID:ESTIMOTE_PROXIMITY_UUID
+                                                                     identifier:DEFAULT_BEACON_IDENTIFIER];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -51,21 +52,9 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 #pragma mark - ESTBeaconManager Delegate ( default )
 
 -(void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region {
-
     self.beacons = beacons;
-
-    NSLog( @"wh00t - beacons : %@", beacons );
+    [self.tableView reloadData];
 }
-
-
-#pragma mark - ESTBeaconManagerUUIDGroup Delegate ( temporary - until block support is added )
-
--(NSArray *)ESTBeaconManagerDelegateShouldReturnUUIDIdentifierArray {
-
-    // The order is import here for now as it is still a WIP.  For now, it is what it is.
-    return @[ ESTIMOTE_PROXIMITY_UUID, DEFAULT_BEACON_IDENTIFIER ];
-}
-
 
 #pragma mark -
 #pragma mark UITableView Delegate/Datasource

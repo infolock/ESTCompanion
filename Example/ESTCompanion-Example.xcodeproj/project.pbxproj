@@ -15,14 +15,17 @@
 		0546E5941936E56200EFDF9F /* estcompAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0546E5931936E56200EFDF9F /* estcompAppDelegate.m */; };
 		0546E5971936E56200EFDF9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0546E5951936E56200EFDF9F /* Main.storyboard */; };
 		0546E59C1936E56200EFDF9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0546E59B1936E56200EFDF9F /* Images.xcassets */; };
-		0546E5BE1936E63100EFDF9F /* ESTBeaconManager+BeaconStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0546E5BB1936E63100EFDF9F /* ESTBeaconManager+BeaconStore.m */; };
-		0546E5BF1936E63100EFDF9F /* ESTBeaconManager+UUIDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0546E5BD1936E63100EFDF9F /* ESTBeaconManager+UUIDGroup.m */; };
 		0546E5C21936E66A00EFDF9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0546E5C11936E66A00EFDF9F /* ViewController.m */; };
 		0546E5CE1936E8E400EFDF9F /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5CC1936E7F800EFDF9F /* libEstimoteSDK.a */; };
 		0546E5D01936E91500EFDF9F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5CF1936E91500EFDF9F /* SystemConfiguration.framework */; };
 		0546E5D21936E92000EFDF9F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5D11936E92000EFDF9F /* CoreLocation.framework */; };
 		0546E5D41936E92B00EFDF9F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5D31936E92B00EFDF9F /* CoreBluetooth.framework */; };
 		0546E5D71936ED8900EFDF9F /* beaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */; };
+		05B330A419381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B3309F19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m */; };
+		05B330A519381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330A119381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m */; };
+		05B330A619381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330A319381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m */; };
+		05B330AB19381D8600B2EF43 /* ESTCompanion.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330A819381D8600B2EF43 /* ESTCompanion.m */; };
+		05B330AC19381D8600B2EF43 /* ESTCompanionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330AA19381D8600B2EF43 /* ESTCompanionConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +42,6 @@
 		0546E5961936E56200EFDF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0546E59B1936E56200EFDF9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0546E5A21936E56200EFDF9F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		0546E5BA1936E63100EFDF9F /* ESTBeaconManager+BeaconStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+BeaconStore.h"; sourceTree = "<group>"; };
-		0546E5BB1936E63100EFDF9F /* ESTBeaconManager+BeaconStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+BeaconStore.m"; sourceTree = "<group>"; };
-		0546E5BC1936E63100EFDF9F /* ESTBeaconManager+UUIDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+UUIDGroup.h"; sourceTree = "<group>"; };
-		0546E5BD1936E63100EFDF9F /* ESTBeaconManager+UUIDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+UUIDGroup.m"; sourceTree = "<group>"; };
 		0546E5C01936E66A00EFDF9F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0546E5C11936E66A00EFDF9F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0546E5C31936E74200EFDF9F /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
@@ -57,6 +56,16 @@
 		0546E5D31936E92B00EFDF9F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		0546E5D51936ED8900EFDF9F /* beaconTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beaconTableViewCell.h; sourceTree = "<group>"; };
 		0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = beaconTableViewCell.m; sourceTree = "<group>"; };
+		05B3309E19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+AutoRegioning.h"; sourceTree = "<group>"; };
+		05B3309F19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+AutoRegioning.m"; sourceTree = "<group>"; };
+		05B330A019381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+BeaconStore.h"; sourceTree = "<group>"; };
+		05B330A119381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+BeaconStore.m"; sourceTree = "<group>"; };
+		05B330A219381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+UUIDGroup.h"; sourceTree = "<group>"; };
+		05B330A319381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+UUIDGroup.m"; sourceTree = "<group>"; };
+		05B330A719381D8600B2EF43 /* ESTCompanion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCompanion.h; sourceTree = "<group>"; };
+		05B330A819381D8600B2EF43 /* ESTCompanion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCompanion.m; sourceTree = "<group>"; };
+		05B330A919381D8600B2EF43 /* ESTCompanionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCompanionConstants.h; sourceTree = "<group>"; };
+		05B330AA19381D8600B2EF43 /* ESTCompanionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCompanionConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +122,7 @@
 		0546E5891936E56200EFDF9F /* ESTCompanion-Example */ = {
 			isa = PBXGroup;
 			children = (
-				0546E5D91937097300EFDF9F /* Classes */,
+				05B3309B19381D6500B2EF43 /* ESTCompanion */,
 				0546E5D81937096300EFDF9F /* Controllers */,
 				0546E5951936E56200EFDF9F /* Main.storyboard */,
 				0546E5921936E56200EFDF9F /* estcompAppDelegate.h */,
@@ -133,25 +142,6 @@
 				0546E58F1936E56200EFDF9F /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0546E5B81936E63100EFDF9F /* ESTCompanion */ = {
-			isa = PBXGroup;
-			children = (
-				0546E5B91936E63100EFDF9F /* Categories */,
-			);
-			path = ESTCompanion;
-			sourceTree = "<group>";
-		};
-		0546E5B91936E63100EFDF9F /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				0546E5BA1936E63100EFDF9F /* ESTBeaconManager+BeaconStore.h */,
-				0546E5BB1936E63100EFDF9F /* ESTBeaconManager+BeaconStore.m */,
-				0546E5BC1936E63100EFDF9F /* ESTBeaconManager+UUIDGroup.h */,
-				0546E5BD1936E63100EFDF9F /* ESTBeaconManager+UUIDGroup.m */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		0546E5C51936E7F800EFDF9F /* EstimoteSDK */ = {
@@ -185,14 +175,6 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		0546E5D91937097300EFDF9F /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				0546E5B81936E63100EFDF9F /* ESTCompanion */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
 		0546E5DA1937098C00EFDF9F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +182,40 @@
 				0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		05B3309B19381D6500B2EF43 /* ESTCompanion */ = {
+			isa = PBXGroup;
+			children = (
+				05B3309C19381D6500B2EF43 /* Categories */,
+				05B3309D19381D6500B2EF43 /* Classes */,
+			);
+			name = ESTCompanion;
+			path = ESTCompanion/ESTCompanion;
+			sourceTree = "<group>";
+		};
+		05B3309C19381D6500B2EF43 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				05B3309E19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.h */,
+				05B3309F19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m */,
+				05B330A019381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.h */,
+				05B330A119381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m */,
+				05B330A219381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.h */,
+				05B330A319381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		05B3309D19381D6500B2EF43 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				05B330A719381D8600B2EF43 /* ESTCompanion.h */,
+				05B330A819381D8600B2EF43 /* ESTCompanion.m */,
+				05B330A919381D8600B2EF43 /* ESTCompanionConstants.h */,
+				05B330AA19381D8600B2EF43 /* ESTCompanionConstants.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B330A419381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m in Sources */,
+				05B330AB19381D8600B2EF43 /* ESTCompanion.m in Sources */,
+				05B330AC19381D8600B2EF43 /* ESTCompanionConstants.m in Sources */,
+				05B330A619381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m in Sources */,
 				0546E5C21936E66A00EFDF9F /* ViewController.m in Sources */,
-				0546E5BE1936E63100EFDF9F /* ESTBeaconManager+BeaconStore.m in Sources */,
-				0546E5BF1936E63100EFDF9F /* ESTBeaconManager+UUIDGroup.m in Sources */,
+				05B330A519381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m in Sources */,
 				0546E5D71936ED8900EFDF9F /* beaconTableViewCell.m in Sources */,
 				0546E5941936E56200EFDF9F /* estcompAppDelegate.m in Sources */,
 				0546E5901936E56200EFDF9F /* main.m in Sources */,
@@ -379,8 +398,7 @@
 				INFOPLIST_FILE = "ESTCompanion-Example/ESTCompanion-Example-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/EstimoteSDK/**",
-					"$(PROJECT_DIR)/EstimoteSDK",
+					"$(PROJECT_DIR)/ESTCompanion-Example/ESTCompanion/EstimoteSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -397,8 +415,7 @@
 				INFOPLIST_FILE = "ESTCompanion-Example/ESTCompanion-Example-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/EstimoteSDK/**",
-					"$(PROJECT_DIR)/EstimoteSDK",
+					"$(PROJECT_DIR)/ESTCompanion-Example/ESTCompanion/EstimoteSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

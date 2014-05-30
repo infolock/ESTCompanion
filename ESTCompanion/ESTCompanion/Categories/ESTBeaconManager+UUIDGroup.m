@@ -15,6 +15,12 @@ static char kAssociatedRegionKey;
 
 @implementation ESTBeaconManager ( UUIDGroup )
 
+
+#pragma mark -
+#pragma mark Instance Methods
+#pragma mark -
+
+
 -(instancetype)initWithDelegate:(id <ESTBeaconManagerDelegate>)delegate {
     return [self initWithOptions:kUUIDGroupInitOptionsNone delegate:delegate groupBy:kUUIDGroupByNone sortBy:kUUIDGroupSortByDefault];
 }
@@ -101,7 +107,6 @@ static char kAssociatedRegionKey;
     NSLog(@"Ranging Started Immediately");
 }
 
-
 -(BOOL)isValidUUIDIdentifierArray:(NSArray *)uuidIdentifierArray {
     return uuidIdentifierArray && [uuidIdentifierArray count] == 2 && [uuidIdentifierArray[0] isKindOfClass:[NSUUID class]] && [uuidIdentifierArray[1] isKindOfClass:[NSString class]];
 }
@@ -126,27 +131,9 @@ static char kAssociatedRegionKey;
     objc_setAssociatedObject( self, &kAssociatedRegionKey, associatedRegion, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+
 -(ESTBeaconRegion *)associatedRegion {
     return objc_getAssociatedObject( self, &kAssociatedRegionKey);
-}
-
-#pragma mark -
-#pragma mark Static/Category Helper Methods
-#pragma mark -
-
-// Get the string representation of a given CLProximity
-+(NSString *)stringFromProximity:(CLProximity)proximity {
-    switch (proximity) {
-        case CLProximityImmediate: return @"Immediate";
-        case CLProximityNear: return @"Near";
-        case CLProximityFar: return @"Far";
-        case CLProximityUnknown: default: return @"Unknown";
-    }
-}
-
-// convenience method for stringFromProximity ( seeing a lot of people using it this way )
-+(NSString *)nameFromProximity:(CLProximity)proximity {
-    return [[self class] stringFromProximity:proximity];
 }
 
 @end

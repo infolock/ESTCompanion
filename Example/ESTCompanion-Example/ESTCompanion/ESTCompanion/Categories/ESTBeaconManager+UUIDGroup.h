@@ -76,10 +76,10 @@ typedef NS_OPTIONS(NSUInteger, kUUIDGroupInitOptions) {
 
 -(void)stopRangingBeaconsInRegion;
 
+-(BOOL)isValidUUIDIdentifierArray:(NSArray *)uuidIdentifierArray;
 
-// Static/Category Methods
-
-+(NSString *)stringFromProximity:(CLProximity)proximity;
-+(NSString *)nameFromProximity:(CLProximity)proximity;
+// Associated Objects - to ensure we can access the same region from children
+-(ESTBeaconRegion *)associatedRegion;
+-(void)setAssociatedRegion:(ESTBeaconRegion *)associatedRegion;
 
 @end

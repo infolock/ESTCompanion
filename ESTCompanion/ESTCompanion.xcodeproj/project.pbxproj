@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		058ED0861937F3E300B03C26 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058ED0851937F3E300B03C26 /* CoreBluetooth.framework */; };
+		058ED0881937F46D00B03C26 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 058ED0871937F46D00B03C26 /* libEstimoteSDK.a */; };
+		058ED08A1937F47500B03C26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058ED0891937F47500B03C26 /* CoreLocation.framework */; };
+		058ED08C1937F47E00B03C26 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058ED08B1937F47D00B03C26 /* SystemConfiguration.framework */; };
+		398480C89168BAFE96447AD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39848E4ED5E2C7426FE1E57A /* UIKit.framework */; };
+		398480CDCD06DEB1E1C32A4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39848693FEF16C0E0AB9C760 /* InfoPlist.strings */; };
+		398481F0B3F822C73CCE82C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398484D9813C14A1E7F0217E /* CoreGraphics.framework */; };
+		39848206E186F11487D85B22 /* ESTCompanion.m in Sources */ = {isa = PBXBuildFile; fileRef = 39848A4FB853DACED3FFF003 /* ESTCompanion.m */; };
+		398485C07C1E5E82CC0654ED /* ESTBeaconManager+UUIDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 39848A03816A58537B7867E2 /* ESTBeaconManager+UUIDGroup.m */; };
+		398486888E69C2656DC5D465 /* ESTBeaconManager+AutoRegioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 398489E05BB8D4C4C3AA03A3 /* ESTBeaconManager+AutoRegioning.m */; };
+		398487F8D238847F3AB96186 /* ESTCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39848094C483314B38461F20 /* ESTCAppDelegate.m */; };
+		398487FE6D6B46F385D111D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3984879E3D9C44F58F0905E3 /* Foundation.framework */; };
+		398489A578795737AA23BA9D /* ESTCompanionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984817DBE2787C4BF953E11 /* ESTCompanionConstants.m */; };
+		39848BFB27A4D1B8A37FAE6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39848595C86C608409A93D76 /* Images.xcassets */; };
+		39848E5F479EE414A95D4DDB /* ESTBeaconManager+BeaconStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 39848431646EE90D94A833D6 /* ESTBeaconManager+BeaconStore.m */; };
+		39848ED74CEA1CF2A8B2AE4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 398484907C8679047FAEA250 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		058ED0851937F3E300B03C26 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		058ED0871937F46D00B03C26 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
+		058ED0891937F47500B03C26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		058ED08B1937F47D00B03C26 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		39848094C483314B38461F20 /* ESTCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESTCAppDelegate.m; sourceTree = "<group>"; };
+		398481525F5E28B21B125AE2 /* ESTCompanion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCompanion.h; sourceTree = "<group>"; };
+		3984817DBE2787C4BF953E11 /* ESTCompanionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCompanionConstants.m; sourceTree = "<group>"; };
+		39848272699195E93FBDFA9D /* ESTCompanionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCompanionConstants.h; sourceTree = "<group>"; };
+		39848431646EE90D94A833D6 /* ESTBeaconManager+BeaconStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+BeaconStore.m"; sourceTree = "<group>"; };
+		3984846AE376BCD61B1FD30C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		398484907C8679047FAEA250 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		398484D9813C14A1E7F0217E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3984856F87B5A29E23A1B597 /* ESTBeaconManager+BeaconStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+BeaconStore.h"; sourceTree = "<group>"; };
+		3984858099884957C1670C23 /* ESTCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESTCAppDelegate.h; sourceTree = "<group>"; };
+		39848595C86C608409A93D76 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		39848685E9CD69F4665CD24A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3984879E3D9C44F58F0905E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		398489E05BB8D4C4C3AA03A3 /* ESTBeaconManager+AutoRegioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+AutoRegioning.m"; sourceTree = "<group>"; };
+		39848A03816A58537B7867E2 /* ESTBeaconManager+UUIDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+UUIDGroup.m"; sourceTree = "<group>"; };
+		39848A3C12C85FCAA32B8E72 /* ESTCompanion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "ESTCompanion-Info.plist"; sourceTree = "<group>"; };
+		39848A4FB853DACED3FFF003 /* ESTCompanion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCompanion.m; sourceTree = "<group>"; };
+		39848A66BD23B30DE4CAF6BC /* ESTCompanion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ESTCompanion-Prefix.pch"; sourceTree = "<group>"; };
+		39848CE496359B66A836EFAB /* ESTBeaconManager+UUIDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+UUIDGroup.h"; sourceTree = "<group>"; };
+		39848E4ED5E2C7426FE1E57A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		39848E9520A3516409889312 /* ESTBeaconManager+AutoRegioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+AutoRegioning.h"; sourceTree = "<group>"; };
+		39848F14B430A0B3FC66488F /* ESTCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESTCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39848B7BB4835DCCB3054B89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				058ED08C1937F47E00B03C26 /* SystemConfiguration.framework in Frameworks */,
+				058ED08A1937F47500B03C26 /* CoreLocation.framework in Frameworks */,
+				058ED0881937F46D00B03C26 /* libEstimoteSDK.a in Frameworks */,
+				058ED0861937F3E300B03C26 /* CoreBluetooth.framework in Frameworks */,
+				398487FE6D6B46F385D111D2 /* Foundation.framework in Frameworks */,
+				398481F0B3F822C73CCE82C2 /* CoreGraphics.framework in Frameworks */,
+				398480C89168BAFE96447AD6 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		398480CC1904D74DA45B811B /* ESTCompanion */ = {
+			isa = PBXGroup;
+			children = (
+				3984861592928F7036C046F9 /* Categories */,
+				39848CC41C28B67BEF8D6A23 /* Classes */,
+				3984858099884957C1670C23 /* ESTCAppDelegate.h */,
+				39848094C483314B38461F20 /* ESTCAppDelegate.m */,
+				39848595C86C608409A93D76 /* Images.xcassets */,
+				398488BFB60CC037226DAE4C /* Supporting Files */,
+			);
+			path = ESTCompanion;
+			sourceTree = "<group>";
+		};
+		3984854A3B049EA914B89417 = {
+			isa = PBXGroup;
+			children = (
+				398480CC1904D74DA45B811B /* ESTCompanion */,
+				3984861497179D1000CB1C99 /* Frameworks */,
+				39848EF3F3FF4F7F70E3E878 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3984861497179D1000CB1C99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				058ED08B1937F47D00B03C26 /* SystemConfiguration.framework */,
+				058ED0891937F47500B03C26 /* CoreLocation.framework */,
+				058ED0871937F46D00B03C26 /* libEstimoteSDK.a */,
+				058ED0851937F3E300B03C26 /* CoreBluetooth.framework */,
+				3984879E3D9C44F58F0905E3 /* Foundation.framework */,
+				398484D9813C14A1E7F0217E /* CoreGraphics.framework */,
+				39848E4ED5E2C7426FE1E57A /* UIKit.framework */,
+				3984846AE376BCD61B1FD30C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3984861592928F7036C046F9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				39848CE496359B66A836EFAB /* ESTBeaconManager+UUIDGroup.h */,
+				39848A03816A58537B7867E2 /* ESTBeaconManager+UUIDGroup.m */,
+				3984856F87B5A29E23A1B597 /* ESTBeaconManager+BeaconStore.h */,
+				39848431646EE90D94A833D6 /* ESTBeaconManager+BeaconStore.m */,
+				39848E9520A3516409889312 /* ESTBeaconManager+AutoRegioning.h */,
+				398489E05BB8D4C4C3AA03A3 /* ESTBeaconManager+AutoRegioning.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		398488BFB60CC037226DAE4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39848A3C12C85FCAA32B8E72 /* ESTCompanion-Info.plist */,
+				39848693FEF16C0E0AB9C760 /* InfoPlist.strings */,
+				398484907C8679047FAEA250 /* main.m */,
+				39848A66BD23B30DE4CAF6BC /* ESTCompanion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39848CC41C28B67BEF8D6A23 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				398481525F5E28B21B125AE2 /* ESTCompanion.h */,
+				39848A4FB853DACED3FFF003 /* ESTCompanion.m */,
+				39848272699195E93FBDFA9D /* ESTCompanionConstants.h */,
+				3984817DBE2787C4BF953E11 /* ESTCompanionConstants.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		39848EF3F3FF4F7F70E3E878 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39848F14B430A0B3FC66488F /* ESTCompanion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39848B90F2AF3FC5C31AB4AC /* ESTCompanion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 398489A442679A8AD65CFDF0 /* Build configuration list for PBXNativeTarget "ESTCompanion" */;
+			buildPhases = (
+				3984854CF01CF7142AD12646 /* Sources */,
+				39848B7BB4835DCCB3054B89 /* Frameworks */,
+				39848A8EF24A6658C9A02B7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ESTCompanion;
+			productName = ESTCompanion;
+			productReference = 39848F14B430A0B3FC66488F /* ESTCompanion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		398489CB751A66CA5E778106 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = DataOCD;
+			};
+			buildConfigurationList = 3984878B266A153B581C2940 /* Build configuration list for PBXProject "ESTCompanion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3984854A3B049EA914B89417;
+			productRefGroup = 39848EF3F3FF4F7F70E3E878 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39848B90F2AF3FC5C31AB4AC /* ESTCompanion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39848A8EF24A6658C9A02B7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				398480CDCD06DEB1E1C32A4F /* InfoPlist.strings in Resources */,
+				39848BFB27A4D1B8A37FAE6A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3984854CF01CF7142AD12646 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39848ED74CEA1CF2A8B2AE4B /* main.m in Sources */,
+				398487F8D238847F3AB96186 /* ESTCAppDelegate.m in Sources */,
+				398485C07C1E5E82CC0654ED /* ESTBeaconManager+UUIDGroup.m in Sources */,
+				39848E5F479EE414A95D4DDB /* ESTBeaconManager+BeaconStore.m in Sources */,
+				398486888E69C2656DC5D465 /* ESTBeaconManager+AutoRegioning.m in Sources */,
+				39848206E186F11487D85B22 /* ESTCompanion.m in Sources */,
+				398489A578795737AA23BA9D /* ESTCompanionConstants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		39848693FEF16C0E0AB9C760 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39848685E9CD69F4665CD24A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		398484A51FBE7A1E7EF52F52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ESTCompanion/ESTCompanion-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./EstimoteSDK/Headers,
+				);
+				INFOPLIST_FILE = "ESTCompanion/ESTCompanion-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3984882A4166A164E3E7A652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		39848A0D3E06528489847A60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39848E0120523A86E3096C53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ESTCompanion/ESTCompanion-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./EstimoteSDK/Headers,
+				);
+				INFOPLIST_FILE = "ESTCompanion/ESTCompanion-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3984878B266A153B581C2940 /* Build configuration list for PBXProject "ESTCompanion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3984882A4166A164E3E7A652 /* Debug */,
+				39848A0D3E06528489847A60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		398489A442679A8AD65CFDF0 /* Build configuration list for PBXNativeTarget "ESTCompanion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				398484A51FBE7A1E7EF52F52 /* Debug */,
+				39848E0120523A86E3096C53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 398489CB751A66CA5E778106 /* Project object */;
+}

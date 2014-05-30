@@ -7,6 +7,7 @@
 //
 
 #import "ESTBeaconManager+BeaconStore.h"
+#import "ESTCompanionConstants.h"
 
 @implementation ESTBeaconManager (BeaconStore)
 
@@ -31,43 +32,43 @@
 
 #pragma mark - Methods using kBeaconStoreTypes
 
-+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes {
++(void)saveBeaconsInArray:(NSArray *)beacons usingStoreTypes:(kBeaconStores)storageTypes {
     if( [beacons count] == 0 ) {
         NSLog( @"There are no beacons found in the received array to store.  storeBeaconsInArray returning without saving anything." );
         return;
     }
 
-    if( storageTypes & kBeaconStoreTypeNSUserDefaults ) {
-        [[self class] writeToNSUserDefaultsUsingBeacons:beacons];
+    if( storageTypes & kBeaconStoresDefault ) {
+        [[self class] saveToDefaultsUsingBeacons:beacons];
     }
 }
 
-+(void)storeBeaconsInArray:(NSArray *)beacons storeTypes:(kBeaconStoreTypes)storageTypes withStorageKeyName:(NSString *)keyName {
++(void)saveBeaconsInArray:(NSArray *)beacons usingStoreTypes:(kBeaconStores)storageTypes withKeyName:(NSString *)keyName {
 
     if( [beacons count] == 0 ) {
         NSLog( @"There are no beacons found in the received array to store.  storeBeaconsInArray returning without saving anything." );
         return;
     }
 
-    if( storageTypes & kBeaconStoreTypeNSUserDefaults ) {
-        [[self class] writeToNSUserDefaultsUsingBeacons:beacons withStorageKeyName:keyName];
+    if( storageTypes & kBeaconStoresDefault ) {
+        [[self class] saveToDefaultsUsingBeacons:beacons withStorageKeyName:keyName];
     }
 }
 
 /**
  * @todo Should update this to support appending/merging other storage types to a mutable array and returning the result.
  */
-+(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType {
-    if( storageType & kBeaconStoreTypeNSUserDefaults ) {
-        return [[self class] retrieveBeaconsFromNSUserDefaults];
++(NSArray *)obtainBeaconsFromStoreTypes:(kBeaconStores)storageType {
+    if( storageType & kBeaconStoresDefault ) {
+        return [[self class] obtainBeaconsFromDefaults];
     }
 
     return nil;
 }
 
-+(NSArray *)retrieveBeaconsFromStorageTypes:(kBeaconStoreTypes)storageType usingStorageKeyName:(NSString *)keyName {
-    if( storageType & kBeaconStoreTypeNSUserDefaults ) {
-        return [[self class] retrieveBeaconsFromNSUserDefaultsUsingKeyWithName:keyName];
++(NSArray *)obtainBeaconsFromStoreTypes:(kBeaconStores)storageType usingStorageKeyName:(NSString *)keyName {
+    if( storageType & kBeaconStoresDefault ) {
+        return [[self class] obtainBeaconsFromDefaultsWithKeyName:keyName];
     }
 
     return nil;
@@ -79,33 +80,29 @@
 /**
  * @todo Perhaps we need a way to specify the location to use as well?
  */
-+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons {
-
++(void)saveToDefaultsUsingBeacons:(NSArray *)beacons {
     NSString *storageKey = [[self class] stringForBeaconStoreInfoKey:kBeaconStoreInfoDefaultKeyName];
-    [self writeToNSUserDefaultsUsingBeacons:beacons withStorageKeyName:storageKey];
+    [self saveToDefaultsUsingBeacons:beacons withStorageKeyName:storageKey];
 }
 
-+(void)writeToNSUserDefaultsUsingBeacons:(NSArray *)beacons withStorageKeyName:(NSString *)keyName {
++(void)saveToDefaultsUsingBeacons:(NSArray *)beacons withStorageKeyName:(NSString *)keyName {
     NSMutableArray *storageData = [NSMutableArray array];
-
     for( ESTBeacon *beacon in beacons ) {
         NSData *beaconInfo = [NSKeyedArchiver archivedDataWithRootObject:beacon];
         [storageData addObject:beaconInfo];
     }
 
-    [[NSUserDefaults standardUserDefaults] setObject:storageData forKey:keyName];
-
+    DEFAULTS_SET(keyName, storageData);
     NSLog( @"Beacons received and stored in NSUserDefaults..." );
 }
 
-+(NSArray *)retrieveBeaconsFromNSUserDefaults {
++(NSArray *)obtainBeaconsFromDefaults {
     NSString *storageKey = [[self class] stringForBeaconStoreInfoKey:kBeaconStoreInfoDefaultKeyName];
-    return [[self class] retrieveBeaconsFromNSUserDefaultsUsingKeyWithName:storageKey];
+    return [DEFAULTS arrayForKey:storageKey];
 }
 
-+(NSArray *)retrieveBeaconsFromNSUserDefaultsUsingKeyWithName:(NSString *)keyName {
-    NSArray *beacons = [[NSUserDefaults standardUserDefaults] arrayForKey:keyName];
-    return beacons;
++(NSArray *)obtainBeaconsFromDefaultsWithKeyName:(NSString *)keyName {
+    return [DEFAULTS arrayForKey:keyName];
 }
 
 @end
