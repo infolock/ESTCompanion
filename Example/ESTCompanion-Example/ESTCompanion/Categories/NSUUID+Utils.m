@@ -28,6 +28,7 @@
     return (bool)[[NSUUID alloc] initWithUUIDString:proximityUUID];
 }
 
+/*
 +(NSString *)stripHyphensFromString:(NSString *)string atCursorPosition:(NSUInteger *)cursorPosition {
     
     NSUInteger originalCursorPosition = *cursorPosition;
@@ -75,5 +76,5 @@
     
     return hyphenatedString;
 }
-
+*/
 @end
