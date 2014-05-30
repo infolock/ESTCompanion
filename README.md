@@ -39,10 +39,12 @@ This is a small category to just make setting up the ESTBeaconManager easier for
 So what's so special about this?
 * No need for the ESTBeaconRegion property ( see details in sibling points below )
 * No need to create an instance of the ESTBeaconRegion
-* Optionally Start Ranging Starts Immediately (rather than manually yourself)
-* When getting an instance of the ESTBeaconManager, we can also (optionally) set ourselves as the delegate, and also turn on some properties immediately without having to issue calls for each of them
+* Optionally Start Ranging Immediately as you init the ESTBeaconManager
+* Optionally set ourselves as the delegate, and also turn on some common properties during init ('NS_OPTIONS') while we are at it
+* etc.
 
-All of the above is achieved with 1 init call, and a single delegate method ( which is not going to even be necessary soon enough ).
+All of the above is achieved with 1 init call, and a single delegate method.  As to not turn this into a Billy Mays infomercial here i'll admit the downside is that there isnt much else yet either.  Its a work in progress though and should grow pretty quickly from here on out. 
+
 
 ##### More Information
 There are (quite a few) initialization points available for this guy too by means of `NS_OPTIONS`/`NS_ENUM` to keep things simple and yet expressive.
