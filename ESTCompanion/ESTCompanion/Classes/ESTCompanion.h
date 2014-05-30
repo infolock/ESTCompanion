@@ -8,8 +8,6 @@
 
 @import Foundation;
 
-#import "ESTCompanionConstants.h"
-
 @interface ESTCompanion : NSObject
 
 +(instancetype)sharedInstance;
