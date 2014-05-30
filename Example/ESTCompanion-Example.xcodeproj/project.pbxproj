@@ -21,15 +21,6 @@
 		0546E5D21936E92000EFDF9F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5D11936E92000EFDF9F /* CoreLocation.framework */; };
 		0546E5D41936E92B00EFDF9F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5D31936E92B00EFDF9F /* CoreBluetooth.framework */; };
 		0546E5D71936ED8900EFDF9F /* beaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */; };
-		05B330A419381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B3309F19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m */; };
-		05B330A519381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330A119381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m */; };
-		05B330A619381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330A319381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m */; };
-		05B330AB19381D8600B2EF43 /* ESTCompanion.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330A819381D8600B2EF43 /* ESTCompanion.m */; };
-		05B330AC19381D8600B2EF43 /* ESTCompanionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330AA19381D8600B2EF43 /* ESTCompanionConstants.m */; };
-		05B330C019384ED100B2EF43 /* ESTBeacon+Companion.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330BF19384ED100B2EF43 /* ESTBeacon+Companion.m */; };
-		05B330C8193866DB00B2EF43 /* ImageViewRenderMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330C3193866DB00B2EF43 /* ImageViewRenderMode.m */; };
-		05B330C9193866DB00B2EF43 /* UIColor+Hexcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330C5193866DB00B2EF43 /* UIColor+Hexcode.m */; };
-		05B330CA193866DB00B2EF43 /* UIImage+RenderingMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B330C7193866DB00B2EF43 /* UIImage+RenderingMode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,24 +51,6 @@
 		0546E5D31936E92B00EFDF9F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		0546E5D51936ED8900EFDF9F /* beaconTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beaconTableViewCell.h; sourceTree = "<group>"; };
 		0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = beaconTableViewCell.m; sourceTree = "<group>"; };
-		05B3309E19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+AutoRegioning.h"; sourceTree = "<group>"; };
-		05B3309F19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+AutoRegioning.m"; sourceTree = "<group>"; };
-		05B330A019381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+BeaconStore.h"; sourceTree = "<group>"; };
-		05B330A119381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+BeaconStore.m"; sourceTree = "<group>"; };
-		05B330A219381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeaconManager+UUIDGroup.h"; sourceTree = "<group>"; };
-		05B330A319381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeaconManager+UUIDGroup.m"; sourceTree = "<group>"; };
-		05B330A719381D8600B2EF43 /* ESTCompanion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCompanion.h; sourceTree = "<group>"; };
-		05B330A819381D8600B2EF43 /* ESTCompanion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCompanion.m; sourceTree = "<group>"; };
-		05B330A919381D8600B2EF43 /* ESTCompanionConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCompanionConstants.h; sourceTree = "<group>"; };
-		05B330AA19381D8600B2EF43 /* ESTCompanionConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCompanionConstants.m; sourceTree = "<group>"; };
-		05B330BE19384ED100B2EF43 /* ESTBeacon+Companion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTBeacon+Companion.h"; sourceTree = "<group>"; };
-		05B330BF19384ED100B2EF43 /* ESTBeacon+Companion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTBeacon+Companion.m"; sourceTree = "<group>"; };
-		05B330C2193866DB00B2EF43 /* ImageViewRenderMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewRenderMode.h; sourceTree = "<group>"; };
-		05B330C3193866DB00B2EF43 /* ImageViewRenderMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewRenderMode.m; sourceTree = "<group>"; };
-		05B330C4193866DB00B2EF43 /* UIColor+Hexcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexcode.h"; sourceTree = "<group>"; };
-		05B330C5193866DB00B2EF43 /* UIColor+Hexcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexcode.m"; sourceTree = "<group>"; };
-		05B330C6193866DB00B2EF43 /* UIImage+RenderingMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RenderingMode.h"; sourceTree = "<group>"; };
-		05B330C7193866DB00B2EF43 /* UIImage+RenderingMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RenderingMode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +107,6 @@
 		0546E5891936E56200EFDF9F /* ESTCompanion-Example */ = {
 			isa = PBXGroup;
 			children = (
-				05B3309B19381D6500B2EF43 /* ESTCompanion */,
 				0546E5D81937096300EFDF9F /* Controllers */,
 				0546E5951936E56200EFDF9F /* Main.storyboard */,
 				0546E5921936E56200EFDF9F /* estcompAppDelegate.h */,
@@ -194,56 +166,6 @@
 				0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */,
 			);
 			name = Cell;
-			sourceTree = "<group>";
-		};
-		05B3309B19381D6500B2EF43 /* ESTCompanion */ = {
-			isa = PBXGroup;
-			children = (
-				05B3309C19381D6500B2EF43 /* Categories */,
-				05B3309D19381D6500B2EF43 /* Classes */,
-				05B330C1193866DB00B2EF43 /* Misc */,
-			);
-			name = ESTCompanion;
-			path = ESTCompanion/ESTCompanion;
-			sourceTree = "<group>";
-		};
-		05B3309C19381D6500B2EF43 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				05B3309E19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.h */,
-				05B3309F19381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m */,
-				05B330A019381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.h */,
-				05B330A119381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m */,
-				05B330A219381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.h */,
-				05B330A319381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m */,
-				05B330BE19384ED100B2EF43 /* ESTBeacon+Companion.h */,
-				05B330BF19384ED100B2EF43 /* ESTBeacon+Companion.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		05B3309D19381D6500B2EF43 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				05B330A719381D8600B2EF43 /* ESTCompanion.h */,
-				05B330A819381D8600B2EF43 /* ESTCompanion.m */,
-				05B330A919381D8600B2EF43 /* ESTCompanionConstants.h */,
-				05B330AA19381D8600B2EF43 /* ESTCompanionConstants.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		05B330C1193866DB00B2EF43 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-				05B330C2193866DB00B2EF43 /* ImageViewRenderMode.h */,
-				05B330C3193866DB00B2EF43 /* ImageViewRenderMode.m */,
-				05B330C4193866DB00B2EF43 /* UIColor+Hexcode.h */,
-				05B330C5193866DB00B2EF43 /* UIColor+Hexcode.m */,
-				05B330C6193866DB00B2EF43 /* UIImage+RenderingMode.h */,
-				05B330C7193866DB00B2EF43 /* UIImage+RenderingMode.m */,
-			);
-			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,17 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B330C9193866DB00B2EF43 /* UIColor+Hexcode.m in Sources */,
-				05B330CA193866DB00B2EF43 /* UIImage+RenderingMode.m in Sources */,
-				05B330A419381D7C00B2EF43 /* ESTBeaconManager+AutoRegioning.m in Sources */,
-				05B330AB19381D8600B2EF43 /* ESTCompanion.m in Sources */,
-				05B330AC19381D8600B2EF43 /* ESTCompanionConstants.m in Sources */,
-				05B330A619381D7C00B2EF43 /* ESTBeaconManager+UUIDGroup.m in Sources */,
-				05B330C019384ED100B2EF43 /* ESTBeacon+Companion.m in Sources */,
 				0546E5C21936E66A00EFDF9F /* ViewController.m in Sources */,
-				05B330A519381D7C00B2EF43 /* ESTBeaconManager+BeaconStore.m in Sources */,
 				0546E5D71936ED8900EFDF9F /* beaconTableViewCell.m in Sources */,
-				05B330C8193866DB00B2EF43 /* ImageViewRenderMode.m in Sources */,
 				0546E5941936E56200EFDF9F /* estcompAppDelegate.m in Sources */,
 				0546E5901936E56200EFDF9F /* main.m in Sources */,
 			);

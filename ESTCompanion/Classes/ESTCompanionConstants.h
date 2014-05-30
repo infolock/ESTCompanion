@@ -12,6 +12,7 @@
 #else
 #define EXTERN extern
 #define STR_CONST(name, value) extern NSString* const name
+
 #endif
 
 /**
@@ -25,3 +26,6 @@
 #define DEFAULT_COMPANION_IDENTIFIER           @"estimoteIdentifier"
 
 #define DEBUG_STRING(str)                   [NSString stringWithFormat:@"%s %d %s\n%@", __FILE__, __LINE__, __PRETTY_FUNCTION__, str]
+
+#define isEmptyString(object) ([object length] == 0)
+#define trimString(object) [object stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
