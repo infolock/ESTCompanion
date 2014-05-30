@@ -62,7 +62,7 @@ Checkout `Categories/ESTBeaconManager+UUIDGroup.h` for more.
 
 <a name="autoregion"/>
 ### ESTBeaconManager+AutoRegioning
-Category to allow setting up AutoRegioning that much easier.
+Category to allow setting up AutoRegioning that much easier.  This category also imports `ESTBeaconManager+UUIDGroup` (above) by default to keep the category chain going for now.  Will work this out to be more clean later.  Just hacking it together right now...  
 
 > Checkout the Example for a very simple usage example
 
@@ -130,6 +130,7 @@ Here is a screenshot for the curious:
 
 <a name="todos"/>
 # @todo's
+* Establish a good, solid Object Structure and reduce the noise that kind of feels is starting to take shape already.  This will be item #1 when main principals and ideas are realized and established. 
 * Simplify checking for updates
   * May actually add an option to check for an update every `x` days, or on `z` day of the week.
 * Update Example to show how to use the `BeaconStore` category
