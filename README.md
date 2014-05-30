@@ -8,11 +8,11 @@ ESTCompanion
 ## Table of Contents
 [Requirements](#requirements)  
 [Installation](#installation)  
-[Categories](#categories)  
+[Categories](#categories)
 * [ESTBeaconManager+UUIDGroup](#uuidgroup)  
 * [ESTBeaconManager+AutoRegioning](#autoregion)  
 * [ESTBeaconManager+BeaconStore](#beaconstore)  
-[Classes](#classes)  
+[Classes](#classes)
 * [ESTCompanion](#estcompanion)  
 * [ESTCompanionConstants](#constants)  
 [iBeacon-related Information/Resources](#resources)  
