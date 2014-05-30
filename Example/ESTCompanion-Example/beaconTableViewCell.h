@@ -12,5 +12,6 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *majorLabel;
 @property (nonatomic, weak) IBOutlet UILabel *minorLabel;
+@property (nonatomic, weak) IBOutlet UILabel *proximityLabel;
 
 @end

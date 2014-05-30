@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "beaconTableViewCell.h"
 
+#import "ESTCompanion.h"
 #import "ESTBeaconManager+AutoRegioning.h"
 
 static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
@@ -78,6 +79,7 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
     cell.majorLabel.text = [beacon.major stringValue];
     cell.minorLabel.text = [beacon.minor stringValue];
+    cell.proximityLabel.text = [[ESTCompanion sharedInstance] stringFromProximity:beacon.proximity];
 
     return cell;
 }

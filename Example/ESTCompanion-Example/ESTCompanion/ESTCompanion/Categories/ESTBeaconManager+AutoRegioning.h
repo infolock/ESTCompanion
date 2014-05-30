@@ -3,7 +3,7 @@
 //  ESTCompanion-Example
 //
 //  Created by Jonathon Hibbard on 5/29/14.
-//  Copyright (c) 2014 estcompanion. All rights reserved.
+//  Copyright (c) 2014 Jonathon Hibbard. All rights reserved.
 //
 
 #import "ESTBeaconManager+UUIDGroup.h"

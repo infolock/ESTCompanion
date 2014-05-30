@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Jonathon Hibbard. All rights reserved.
 //
 
-@import CoreLocation;
-
 #import "ESTCompanion.h"
 
 @interface ESTCompanion()
@@ -42,8 +40,8 @@
 }
 
 // Get the string representation of a given CLProximity
--(NSString *)stringFromProximity:(CLProximity)proximity {
-    return self.proximityStrings[proximity];
+-(NSString *)stringFromProximity:(NSInteger)proximity {
+    return self.proximityStrings[(NSUInteger)proximity];
 }
 
 @end

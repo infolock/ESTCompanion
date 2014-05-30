@@ -12,6 +12,6 @@
 
 +(instancetype)sharedInstance;
 
--(NSString *)stringFromProximity:(CLProximity)proximity;
+-(NSString *)stringFromProximity:(NSInteger)proximity;
 
 @end
