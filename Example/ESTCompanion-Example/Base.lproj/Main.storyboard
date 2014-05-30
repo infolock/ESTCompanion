@@ -74,13 +74,13 @@
                                                 <constraint firstItem="gRB-iq-sSb" firstAttribute="centerY" secondItem="DoH-wy-jpK" secondAttribute="centerY" constant="-0.5" id="43Z-lT-QTl"/>
                                                 <constraint firstAttribute="trailing" secondItem="daD-Ma-dOj" secondAttribute="trailing" constant="33" id="4P5-Rc-ZN9"/>
                                                 <constraint firstItem="gRB-iq-sSb" firstAttribute="leading" secondItem="DoH-wy-jpK" secondAttribute="trailing" constant="8" id="AEi-Tz-XOf"/>
-                                                <constraint firstAttribute="trailing" secondItem="tcl-c5-fid" secondAttribute="trailing" constant="20" id="Bcg-EW-8nq"/>
                                                 <constraint firstItem="I5v-qp-0Dd" firstAttribute="leading" secondItem="DoH-wy-jpK" secondAttribute="leading" id="IJ5-r8-bsK"/>
                                                 <constraint firstItem="UVx-jg-jgl" firstAttribute="leading" secondItem="I5v-qp-0Dd" secondAttribute="trailing" constant="10" id="KCa-b8-X9s"/>
                                                 <constraint firstItem="UVx-jg-jgl" firstAttribute="centerY" secondItem="I5v-qp-0Dd" secondAttribute="centerY" constant="-0.5" id="Kl4-3Q-4CY"/>
                                                 <constraint firstItem="DoH-wy-jpK" firstAttribute="leading" secondItem="Lve-kO-xk6" secondAttribute="leading" constant="20" id="ONJ-5G-9oY"/>
                                                 <constraint firstItem="I5v-qp-0Dd" firstAttribute="top" secondItem="DoH-wy-jpK" secondAttribute="bottom" constant="17" id="ZG3-St-Z5F"/>
                                                 <constraint firstItem="tcl-c5-fid" firstAttribute="top" secondItem="daD-Ma-dOj" secondAttribute="bottom" constant="8" id="qml-bd-tx0"/>
+                                                <constraint firstItem="tcl-c5-fid" firstAttribute="centerX" secondItem="daD-Ma-dOj" secondAttribute="centerX" constant="0.5" id="xu4-dD-4w8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
