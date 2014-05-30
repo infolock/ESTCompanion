@@ -15,6 +15,7 @@ ESTCompanion
 * [ESTBeaconManager+AutoRegioning](#autoregion)  
 * [ESTCompanion+BeaconStore](#beaconstore)  
 * [Others](#othercategories)  
+
 [Classes](#classes)  
 * [ESTCompanion](#estcompanion)  
 * [ESTCompanionConstants](#constants)  
