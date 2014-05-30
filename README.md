@@ -10,6 +10,7 @@ ESTCompanion
 [Installation](#installation)  
 [Overview](#overview)  
 [Categories](#categories)  
+* [ESTBeacon+Companion](#beaconcomp)  
 * [ESTBeaconManager+UUIDGroup](#uuidgroup)  
 * [ESTBeaconManager+AutoRegioning](#autoregion)  
 * [ESTBeaconManager+BeaconStore](#beaconstore)  
@@ -50,6 +51,15 @@ As to not turn this into a Billy Mays infomercial here i'll admit the downside i
 
 <a name="categories"/>
 # Categories
+There also exists a `Misc` folder within `Categories`.  This just contains some UIColor/Tinting manipulation stuff.  Feel free to mess around with it.  Some of it came from another project of mine, a few pieces came also from other repos.
+
+<a name="beaconcomp">
+### ESTBeacon+Companion
+Adds the ability to set the identifier and color for a beacon.  WIP.  Will save to Defaults when it is all said and done.
+
+##### More Information
+Checkout `Categories/ESTBeacon+Companion.h` for more.
+
 <a name="uuidgroup"/>
 ### ESTBeaconManager+UUIDGroup
 This is a small category to just make setting up the ESTBeaconManager easier for when we want to start ranging for estimote beacons.
