@@ -6,20 +6,19 @@ ESTCompanion
 ** *NOTE* You will find a version of the EstimoteSDK in both the Companion and the Example folders.  It will eventually be moved to the parent folder.  The main thing to remember is that this is only for development purposes.  Do not depend on this having the latest/greatest version of their SDK.  You should do that on your own, which you can find [here](https://github.com/Estimote/iOS-SDK).**
 
 ## Table of Contents
-[Requirements](#requirements)  
-[Installation](#installation)  
+[Requirements](#requirements)
+[Installation](#installation)
 [Categories](#categories)  
 * [ESTBeaconManager+UUIDGroup](#uuidgroup)  
 * [ESTBeaconManager+AutoRegioning](#autoregion)  
-* [ESTBeaconManager+BeaconStore](#beaconstore)
-
+* [ESTBeaconManager+BeaconStore](#beaconstore)  
 [Classes](#classes)  
 * [ESTCompanion](#estcompanion)  
 * [ESTCompanionConstants](#constants)  
-[iBeacon-related Information/Resources](#resources)  
-[Example Code](#example)  
-[@todos](#todos)  
-[License](#license)  
+[iBeacon-related Information/Resources](#resources)
+[Example Code](#example)
+[@todos](#todos)
+[License](#license)
 
 
 <a name="requirements"/>
