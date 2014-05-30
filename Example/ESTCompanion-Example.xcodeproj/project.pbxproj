@@ -17,6 +17,7 @@
 		0518DAC31938F2A600DE4BD9 /* UIColor+Hexcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0518DAB81938F2A600DE4BD9 /* UIColor+Hexcode.m */; };
 		0518DAC41938F2A600DE4BD9 /* UIImage+RenderingMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0518DABA1938F2A600DE4BD9 /* UIImage+RenderingMode.m */; };
 		051CA73B1938F7E7005BA1FC /* ESTCompanion+BeaconStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CA73A1938F7E7005BA1FC /* ESTCompanion+BeaconStore.m */; };
+		051CA74119390C3C005BA1FC /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CA74019390C3C005BA1FC /* DetailTableViewController.m */; };
 		0546E5841936E56200EFDF9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5831936E56200EFDF9F /* Foundation.framework */; };
 		0546E5861936E56200EFDF9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5851936E56200EFDF9F /* CoreGraphics.framework */; };
 		0546E5881936E56200EFDF9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5871936E56200EFDF9F /* UIKit.framework */; };
@@ -54,6 +55,8 @@
 		0518DABA1938F2A600DE4BD9 /* UIImage+RenderingMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RenderingMode.m"; sourceTree = "<group>"; };
 		051CA7391938F7E7005BA1FC /* ESTCompanion+BeaconStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ESTCompanion+BeaconStore.h"; sourceTree = "<group>"; };
 		051CA73A1938F7E7005BA1FC /* ESTCompanion+BeaconStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ESTCompanion+BeaconStore.m"; sourceTree = "<group>"; };
+		051CA73F19390C3C005BA1FC /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		051CA74019390C3C005BA1FC /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		0546E5801936E56200EFDF9F /* ESTCompanion-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESTCompanion-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0546E5831936E56200EFDF9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0546E5851936E56200EFDF9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -253,6 +256,8 @@
 				0546E5DA1937098C00EFDF9F /* Cell */,
 				0546E5C01936E66A00EFDF9F /* ViewController.h */,
 				0546E5C11936E66A00EFDF9F /* ViewController.m */,
+				051CA73F19390C3C005BA1FC /* DetailTableViewController.h */,
+				051CA74019390C3C005BA1FC /* DetailTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				051CA74119390C3C005BA1FC /* DetailTableViewController.m in Sources */,
 				0546E5C21936E66A00EFDF9F /* ViewController.m in Sources */,
 				0518DAC41938F2A600DE4BD9 /* UIImage+RenderingMode.m in Sources */,
 				0518DAC01938F2A600DE4BD9 /* ESTCompanion.m in Sources */,

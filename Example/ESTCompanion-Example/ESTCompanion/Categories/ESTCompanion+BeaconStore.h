@@ -26,6 +26,13 @@ typedef NS_OPTIONS(NSUInteger, kBeaconStores) {
 @interface ESTCompanion (BeaconStore)
 
 // Single Beacon Storage/Retrieval
++(NSDictionary *)obtainBeaconInfoFromStoreTypes:(kBeaconStores)storageTypes havingKeyName:(NSString *)keyName;
++(NSDictionary *)obtainBeaconInfoFromUserDefaultsWithKeyName:(NSString *)keyName;
+
++(void)saveBeaconInfo:(NSDictionary *)beaconInfo toStores:(kBeaconStores)storageTypes usingKeyName:(NSString *)keyName;
++(void)saveToUserDefaultsUsingBeaconInfo:(NSDictionary *)beaconInfo keyName:(NSString *)keyName;
+
+
 +(ESTBeacon *)obtainBeaconFromStoreTypes:(kBeaconStores)storageTypes havingKeyName:(NSString *)keyName;
 +(ESTBeacon *)obtainBeaconFromUserDefaultsWithKeyName:(NSString *)keyName;
 

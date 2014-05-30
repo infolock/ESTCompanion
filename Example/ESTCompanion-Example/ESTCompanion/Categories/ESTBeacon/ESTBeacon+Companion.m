@@ -24,9 +24,30 @@ static char kAssociatedIdentifierKey;
 
 #pragma mark Color
 -(UIColor *)color {
-    [self validateProperties];
-    
-    return [self associatedColor];
+
+    UIColor *color = [self associatedColor];
+    if( !color ) {
+
+        NSString *identifier = [self identifier];
+        NSDictionary *beaconInfo = [ESTCompanion obtainBeaconInfoFromStoreTypes:kBeaconStoresDefault havingKeyName:identifier];
+
+        BOOL shouldSync = NO;
+
+        if( !beaconInfo || !beaconInfo[@"color"] ) {
+            color = [UIColor blackColor];
+            shouldSync = YES;
+        } else {
+            color = beaconInfo[@"color"];
+        }
+
+        [self setAssociatedColor:color];
+
+        if( shouldSync ) {
+            [self syncChangesToStore];
+        }
+    }
+
+    return color;
 }
 
 #pragma mark Identifier
@@ -35,10 +56,8 @@ static char kAssociatedIdentifierKey;
     NSString *identifier = [self associatedIdentifier];
     if( !identifier ) {
 
-        NSString *hexcode = [self.color hexCodeColor];
-        NSLog( @"Hex = %@ ", hexcode );
-        
-        identifier = [NSString stringWithFormat:@"%@:%i:%i:%@", DEFAULT_COMPANION_IDENTIFIER, [self.major intValue], [self.minor intValue], hexcode];
+        identifier = [NSString stringWithFormat:@"%@:%i:%i", DEFAULT_COMPANION_IDENTIFIER, [self.major intValue], [self.minor intValue]];
+
         [self setAssociatedIdentifier:identifier];
     }
 
@@ -55,31 +74,30 @@ static char kAssociatedIdentifierKey;
     [self setAssociatedColor:color];
 }
 
+-(void)setIdentifier:(NSString *)identifier {
+    [self setAssociatedIdentifier:identifier];
+}
 
 #pragma mark -
 #pragma mark Methods
 #pragma mark -
 
--(void)validateProperties {
+-(void)syncChangesToStore {
 
-    UIColor *color = [self associatedColor];
-    if( !color ) {
-        UIColor *companionColor = [UIColor blackColor];
-        [self setAssociatedColor:companionColor];
-    }
+    UIColor *color = [self color];
+    NSString *identifier = [self identifier];
+    NSLog( @"identifier = %@ ", identifier );
+
+    NSDictionary *beaconInfo = @{
+                                 @"color": color,
+                                 @"identifier": [identifier copy]
+                                };
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [ESTCompanion saveBeaconInfo:beaconInfo toStores:kBeaconStoresDefault usingKeyName:identifier];
+        SYNC_DEFAULTS;
+    });
 }
-
-
-//-(void)syncChangesToStore {
-//    
-//    [self validateProperties];
-//    
-//    NSString *storeKeyName = [self storeKeyName];
-//    NSLog( @"StoreKeyName = %@ ", storeKeyName );
-//    
-//    [ESTBeaconManager saveBeaconsInArray:@[self] usingStoreTypes:kBeaconStoresDefault withKeyName:storeKeyName];
-//    SYNC_DEFAULTS;
-//}
 
 
 #pragma mark -

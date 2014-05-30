@@ -18,7 +18,7 @@
 
 +(NSString *)stringForBeaconStoreInfoKey:(kBeaconStoreInfo)key {
     static NSString *defaultKeyName = @"ESTBeacons";
-    
+
     switch( key ) {
         case kBeaconStoreInfoDefaultKeyName: return defaultKeyName;
         default: return nil;
@@ -32,6 +32,34 @@
 
 #pragma mark - Methods using kBeaconStoreTypes
 
++(NSDictionary *)obtainBeaconInfoFromStoreTypes:(kBeaconStores)storageTypes havingKeyName:(NSString *)keyName {
+    if( storageTypes & kBeaconStoresDefault ) {
+        return [[self class] obtainBeaconInfoFromUserDefaultsWithKeyName:keyName];
+    }
+
+    return nil;
+}
+
++(NSDictionary *)obtainBeaconInfoFromUserDefaultsWithKeyName:(NSString *)keyName {
+    NSData *beacondata = [DEFAULTS objectForKey:keyName];
+
+    NSLog( @"Obtained Beacon Info from NSUserDefaults..." );
+    return (NSDictionary *)[NSKeyedUnarchiver unarchiveObjectWithData:beacondata];
+}
+
++(void)saveBeaconInfo:(NSDictionary *)beaconInfo toStores:(kBeaconStores)storageTypes usingKeyName:(NSString *)keyName {
+    if( storageTypes & kBeaconStoresDefault ) {
+        [[self class] saveToUserDefaultsUsingBeaconInfo:beaconInfo keyName:keyName];
+    }
+}
+
++(void)saveToUserDefaultsUsingBeaconInfo:(NSDictionary *)beaconInfo keyName:(NSString *)keyName {
+    NSData *beaconData = [NSKeyedArchiver archivedDataWithRootObject:beaconInfo];
+    DEFAULTS_SET(keyName, beaconData);
+
+    NSLog( @"Beacon Info received and stored in NSUserDefaults..." );
+}
+
 +(ESTBeacon *)obtainBeaconFromStoreTypes:(kBeaconStores)storageTypes havingKeyName:(NSString *)keyName {
     if( storageTypes & kBeaconStoresDefault ) {
         return [[self class] obtainBeaconFromUserDefaultsWithKeyName:keyName];
@@ -41,7 +69,11 @@
 }
 
 +(ESTBeacon *)obtainBeaconFromUserDefaultsWithKeyName:(NSString *)keyName {
-    return [DEFAULTS objectForKey:keyName];
+    NSData *beacondata = [DEFAULTS objectForKey:keyName];
+
+    NSLog( @"Obtained Beacon from NSUserDefaults..." );
+
+    return (ESTBeacon *)[NSKeyedUnarchiver unarchiveObjectWithData:beacondata];
 }
 
 +(void)saveBeacon:(ESTBeacon *)beacon toStores:(kBeaconStores)storageTypes usingKeyName:(NSString *)keyName {
@@ -124,12 +156,26 @@
 }
 
 +(NSArray *)obtainBeaconsFromDefaults {
-    NSString *storageKey = [[self class] stringForBeaconStoreInfoKey:kBeaconStoreInfoDefaultKeyName];
-    return [DEFAULTS arrayForKey:storageKey];
+    NSString *keyName = [[self class] stringForBeaconStoreInfoKey:kBeaconStoreInfoDefaultKeyName];
+
+    return [self obtainBeaconsFromDefaultsWithKeyName:keyName];
 }
 
 +(NSArray *)obtainBeaconsFromDefaultsWithKeyName:(NSString *)keyName {
-    return [DEFAULTS arrayForKey:keyName];
+
+    NSArray *savedBeacons = [DEFAULTS arrayForKey:keyName];
+    NSMutableArray *beacons = [NSMutableArray array];
+
+    if( savedBeacons ) {
+        for( NSData *beaconData in savedBeacons ) {
+            ESTBeacon *beacon = [NSKeyedUnarchiver unarchiveObjectWithData:beaconData];
+            [beacons addObject:beacon];
+        }
+    }
+
+    NSLog( @"Obtained Array of Beacons from NSUserDefaults..." );
+
+    return beacons;
 }
 
 @end

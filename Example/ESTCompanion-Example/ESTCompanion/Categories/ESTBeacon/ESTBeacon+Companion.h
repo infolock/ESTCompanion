@@ -14,8 +14,9 @@
 -(NSString *)identifier;
 
 -(void)setColor:(UIColor *)color;
+-(void)setIdentifier:(NSString *)identifier;
 
--(void)validateProperties;
+-(void)syncChangesToStore;
 
 //-(NSString *)storeKeyName;
 //-(void)syncChangesToStore;

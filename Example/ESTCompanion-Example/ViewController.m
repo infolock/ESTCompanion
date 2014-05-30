@@ -8,9 +8,12 @@
 
 #import "ViewController.h"
 #import "beaconTableViewCell.h"
+#import "DetailTableViewController.h"
 
 #import "ESTBeaconManager+AutoRegioning.h"
 #import "ESTBeacon+Companion.h"
+
+#import "UIColor+Hexcode.h"
 
 static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
@@ -20,6 +23,7 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 @property (nonatomic, copy) NSArray *beacons;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 @end
 
 
@@ -61,6 +65,10 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 #pragma mark UITableView Delegate/Datasource
 #pragma mark -
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedIndexPath = indexPath;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 98.0f;
 }
@@ -87,6 +95,35 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
     cell.beaconImageView.tintColor = [beacon color];
 
     return cell;
+}
+
+#pragma mark - unwindBack
+-(IBAction)unwindBack:(UIStoryboardSegue *)segue {
+
+    DetailTableViewController *detailTableViewController = (DetailTableViewController *)segue.sourceViewController;
+
+    UIColor *color = [UIColor colorFromHexCode:detailTableViewController.beaconColor];
+    NSString *identifier = [detailTableViewController.beaconIdentifier copy];
+
+    ESTBeacon *beacon = self.beacons[(NSUInteger)self.selectedIndexPath.row];
+    [beacon setColor:color];
+    [beacon setIdentifier:identifier];
+
+    [beacon syncChangesToStore];
+
+    [self.tableView reloadData];
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if( [segue.identifier isEqualToString:@"details"] ) {
+        DetailTableViewController *detailTableViewController = (DetailTableViewController *)segue.destinationViewController;
+
+        ESTBeacon *beacon = self.beacons[(NSUInteger)self.selectedIndexPath.row];
+
+        detailTableViewController.beaconColor = [[beacon color] hexCodeColor];
+        detailTableViewController.beaconIdentifier = [beacon identifier];
+    }
 }
 
 @end
