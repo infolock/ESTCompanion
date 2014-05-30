@@ -32,22 +32,26 @@ ESTCompanion
 Pretty simple stuff: Copy the ESTCompanion folder into your project - and its ready for use.
 
 
-<a name="categories"/>
-# Categories
-<a name="uuidgroup"/>
-### ESTBeaconManager+UUIDGroup
-This is a small category to just make setting up the ESTBeaconManager easier for when we want to start ranging for estimote beacons.
+<a name="overview">
+# Overview
 
 > Checkout the Example for a very simple usage example
 
 So what's so special about this?
 * No need for the ESTBeaconRegion property ( see details in sibling points below )
-* No need to create an instance of the ESTBeaconRegion
+* No need to create an instance of the ESTBeaconRegion unless you want to
 * Optionally Start Ranging Immediately as you init the ESTBeaconManager
-* Optionally set ourselves as the delegate, and also turn on some common properties during init ('NS_OPTIONS') while we are at it
-* etc.
+* Optionally set ourselves as the delegate, and also turn on some common properties during init ('NS_OPTIONS') while we are at it, etc. etc.
+* Primary happiness for the lazy people like me - reduces this down to an init, ESTBeaconManagerDelegate method, and then cleanup on destuct.
 
-All of the above is achieved with 1 init call, and a single delegate method.  As to not turn this into a Billy Mays infomercial here i'll admit the downside is that there isnt much else yet either.  Its a work in progress though and should grow pretty quickly from here on out. 
+As to not turn this into a Billy Mays infomercial here i'll admit the downside is that there isnt much else yet either.  Its a work in progress though and should grow pretty quickly from here on out. 
+
+
+<a name="categories"/>
+# Categories
+<a name="uuidgroup"/>
+### ESTBeaconManager+UUIDGroup
+This is a small category to just make setting up the ESTBeaconManager easier for when we want to start ranging for estimote beacons.
 
 
 ##### More Information
@@ -113,7 +117,7 @@ Here is a small compilation of good resources, information and repositories rela
 
 <a name="example"/>
 # Example Code
-The included example is nothing special.  It is just a basic example showing how to use some of the features available.  Currently, it only shows how ot use the `GroupUUID` category.
+The included example is nothing special.  It is just a basic example showing how to use some of the features available.  Currently, it only shows how ot use the `AutoRegioning` category.
 
 Here is a screenshot for the curious:
 
