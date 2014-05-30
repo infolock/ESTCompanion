@@ -1,12 +1,12 @@
 //
-//  ESTBeaconManager+BeaconStore.h
-//  estimoteTraining
+//  ESTCompanion+BeaconStore.h
+//  ESTCompanion-Example
 //
-//  Created by Jonathon Hibbard on 5/24/14.
-//  Copyright (c) 2014 Jonathon Hibbard. All rights reserved.
+//  Created by Jonathon Hibbard on 5/30/14.
+//  Copyright (c) 2014 estcompanion. All rights reserved.
 //
 
-#import "ESTBeaconManager.h"
+#import "ESTCompanion.h"
 
 typedef NS_ENUM( NSUInteger, kBeaconStoreInfo ) {
     kBeaconStoreInfoDefaultKeyName
@@ -21,7 +21,19 @@ typedef NS_OPTIONS(NSUInteger, kBeaconStores) {
 };
 
 
-@interface ESTBeaconManager (BeaconStore)
+@class ESTBeacon;
+
+@interface ESTCompanion (BeaconStore)
+
+// Single Beacon Storage/Retrieval
++(ESTBeacon *)obtainBeaconFromStoreTypes:(kBeaconStores)storageTypes havingKeyName:(NSString *)keyName;
++(ESTBeacon *)obtainBeaconFromUserDefaultsWithKeyName:(NSString *)keyName;
+
++(void)saveBeacon:(ESTBeacon *)beacon toStores:(kBeaconStores)storageTypes usingKeyName:(NSString *)keyName;
++(void)saveToUserDefaultsUsingBeacon:(ESTBeacon *)beacon keyName:(NSString *)keyName;
+
+
+// Multiple Beacons Storage/Retrieval
 
 +(void)saveBeaconsInArray:(NSArray *)beacons usingStoreTypes:(kBeaconStores)storageTypes withKeyName:(NSString *)keyName;
 +(void)saveBeaconsInArray:(NSArray *)beacons usingStoreTypes:(kBeaconStores)storageTypes;

@@ -10,7 +10,7 @@
 
 #import "ESTBeacon+Companion.h"
 #import "UIColor+Hexcode.h"
-#import "ESTBeaconManager+BeaconStore.h"
+#import "ESTCompanion+BeaconStore.h"
 #import "ESTCompanionConstants.h"
 
 static char kAssociatedColorKey;
