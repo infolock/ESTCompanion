@@ -21,10 +21,11 @@
 // Is this a valid ProximityUUID?
 +(BOOL)isValidProximityUUID:(NSString *)proximityUUID;
 
+/* These are for use with text fields.  Leaving it here in case someone neeeds something like it ... 
 // Removes all hyphens from a given ProximityUUID
 +(NSString *)stripHyphensFromString:(NSString *)string atCursorPosition:(NSUInteger *)cursorPosition;
 
 // Formats a string to be in a valid ProximityUUID format
 +(NSString *)hyphenateString:(NSString *)string atCursorPosition:(NSUInteger *)cursorPosition;
-
+*/
 @end
