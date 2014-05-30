@@ -151,11 +151,11 @@ Here is a screenshot for the curious:
 * Establish a good, solid Object Structure and reduce the noise that kind of feels is starting to take shape already.  This will be item #1 when main principals and ideas are realized and established. 
 * Simplify checking for updates
   * May actually add an option to check for an update every `x` days, or on `z` day of the week.
-* Update Example to show how to use the `BeaconStore` category
+* ~~Update Example to show how to use the `BeaconStore` category~~
 * Ability to define 3 beacons to work as triangulation points
 * Simplify managing the UUID/Minor/Major values
-* Ability to change the "color" of a beacon ( 2 of mine were always showing up as teal - I'll update with my fix for this)
-* Replace the GroupUUIDDelegate with a block (or just add it as an option)
+* ~~Ability to change the "color" of a beacon ( 2 of mine were always showing up as teal - I'll update with my fix for this)~~
+* ~~Replace the GroupUUIDDelegate with a block (or just add it as an option)~~
 * Add block support to some other things
 * Add background routines for doing some work ( like updates and whatever ) with a single line.
 * etc. etc.  that's enough as to not overwhelm myself for now.
