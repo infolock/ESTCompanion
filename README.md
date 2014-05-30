@@ -3,13 +3,18 @@ ESTCompanion
 
 (WIP) - Finding there are some boiler plate setup stuff for working with [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK).  To make life easier, created some ways to avoid all the boiler plate setup.
 
+** *NOTE* You will find a version of the EstimoteSDK in both the Companion and the Example folders.  It will eventually be moved to the parent folder.  The main thing to remember is that this is only for development purposes.  Do not depend on this having the latest/greatest version of their SDK.  You should do that on your own, which you can find [here](https://github.com/Estimote/iOS-SDK).**
+
 ## Table of Contents
 [Requirements](#requirements)  
 [Installation](#installation)  
 [Categories](#categories)  
 * [ESTBeaconManager+UUIDGroup](#uuidgroup)  
+* [ESTBeaconManager+AutoRegioning](#autoregion)
 * [ESTBeaconManager+BeaconStore](#beaconstore)  
-
+[Classes](#classes)
+* [ESTCompanion](#estcompanion)
+* [ESTCompanionConstants](#constants)
 [iBeacon-related Information/Resources](#resources)  
 [Example Code](#example)  
 [@todos](#todos)  
@@ -19,9 +24,6 @@ ESTCompanion
 <a name="requirements"/>
 # Requirements
 [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK) - see their README for installation instructions
-
-> Note: the EstimoteSDK found within the Example may or may not be current.  You should not rely on it being the latest/greatest - rely on the link above instead!
-
 
 <a name="installation"/>
 # Installation
@@ -49,7 +51,18 @@ All of the above is achieved with 1 init call, and a single delegate method.  As
 ##### More Information
 There are (quite a few) initialization points available for this guy too by means of `NS_OPTIONS`/`NS_ENUM` to keep things simple and yet expressive.
 
-Checkout `ESTBeaconManager+UUIDGroup.h` for more.
+Checkout `Categories/ESTBeaconManager+UUIDGroup.h` for more.
+
+<a name="autoregion"/>
+### ESTBeaconManager+AutoRegioning
+Category to allow setting up AutoRegioning that much easier.
+
+> Checkout the Example for a very simple usage example
+
+##### More Information
+There are (quite a few) initialization points available for this guy too by means of `NS_OPTIONS`/`NS_ENUM` to keep things simple and yet expressive.
+
+Checkout `Categories/ESTBeaconManager+AutoRegioning.h` for more.
 
 <a name="beaconstore"/>
 ### ESTBeaconManager+BeaconStore
@@ -60,7 +73,27 @@ This category is simply a way to persist iBeacons found/altered during ranging t
 This Category is influenced by the [iBeacon Article on Ray Wenderlich's site](http://www.raywenderlich.com/66584/ios7-ibeacons-tutorial).
 
 ##### More Information
-Checkout `ESTBeaconManager+BeaconStore.h` for more.
+Checkout `Categories/ESTBeaconManager+BeaconStore.h` for more.
+
+
+<a name="classes"/>
+# Classes
+<a name="estcompanion"/>
+### ESTCompanion
+Simple Object at this point.  There are bigger plans for it, but for now,  has a easy to use way of obtaining the string value from a CLProximity =P
+
+`NSString *proximity = [ESTCompanion sharedInstance] stringFromProximity:beacon.proximity];`
+
+##### More Information
+Checkout `Classes/ESTCompanion.h` for more.
+
+
+<a name="constants"/>
+### ESTCompanionConstants
+Currently holds just a few constants for dealing with User Defaults, logging, and creating string constants.. 
+
+##### More Information
+Checkout `Classes/ESTCompanionConstants.h` for more.
 
 
 <a name="resources"/>
