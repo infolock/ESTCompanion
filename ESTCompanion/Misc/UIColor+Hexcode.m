@@ -14,38 +14,18 @@
  * This is some code I wrote for an app a buddy of mine and I work on from time to time called eLBee.
  */
 
-+(UIColor *)colorFromHexCode:(NSString *)hexCode {
++(UIColor *)colorFromHexCode:(NSString *)colorString {
 
-    float(^intToBaseHexFloat)(unsigned int, NSInteger) = ^(unsigned int baseVal, NSInteger intVal) {
-        return ((baseVal >> 24) & 0xFF)/255.0f;
-    };
-
-    NSString *(^substringWithRange)(NSString *, NSUInteger, NSUInteger) = ^(NSString * fromString, NSUInteger len, NSUInteger loc) {
-        return [fromString substringWithRange:NSMakeRange(len, loc)];
-    };
-
-    NSString *cString = [hexCode stringByReplacingOccurrencesOfString:@"#" withString:@""];
-
-    if([cString length] == 3)
-        cString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
-                                             substringWithRange(cString, 0, 1),
-                                             substringWithRange(cString, 0, 1),
-                                             substringWithRange(cString, 1, 1),
-                                             substringWithRange(cString, 1, 1),
-                                             substringWithRange(cString, 2, 1),
-                                             substringWithRange(cString, 2, 1)];
-
-    if([cString length] == 6) cString = [cString stringByAppendingString:@"ff"];
-    unsigned int baseValue;
-
-    [[NSScanner scannerWithString:cString] scanHexInt:&baseValue];
-    float red = intToBaseHexFloat(baseValue, 24);
-    float green = intToBaseHexFloat(baseValue, 16);
-    float blue = intToBaseHexFloat(baseValue, 8);
-    float alpha = intToBaseHexFloat(baseValue, 0);
-
-    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+    if(colorString.length == 7) {
+        const char *colorUTF8String = [colorString UTF8String];
+        int r, g, b;
+        sscanf(colorUTF8String, "#%2x%2x%2x", &r, &g, &b);
+        return [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1.0];
+    }
+    
+    return nil;
 }
+
 
 
 /**
@@ -91,11 +71,11 @@
     CGFloat alpha = CGColorGetAlpha( self.CGColor );
 
     if( alpha < 1.0f ) {
-        return [NSString stringWithFormat:@"#%.8x", self.RGBAValue];
+        return [NSString stringWithFormat:@"#%.8x", [self RGBAValue]];
     }
 
     //don't include alpha component
-    return [NSString stringWithFormat:@"#%.6x", self.RGBValue];
+    return [NSString stringWithFormat:@"#%.6x", [self RGBValue]];
 }
 
 -(uint32_t)RGBValue {
