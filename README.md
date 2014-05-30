@@ -91,7 +91,7 @@ This category is simply a way to persist iBeacons found/altered during ranging t
 This Category is influenced by the [iBeacon Article on Ray Wenderlich's site](http://www.raywenderlich.com/66584/ios7-ibeacons-tutorial).
 
 ##### More Information
-Checkout `Categories/ESTBeaconManager+BeaconStore.h` for more.
+Checkout `Categories/ESTCompanion+BeaconStore.h` for more.
 
 <a name="othercategories">
 ### Others
