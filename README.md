@@ -128,7 +128,7 @@ Here is a small compilation of good resources, information and repositories rela
 
 <a name="example"/>
 # Example Code
-The included example is nothing special.  It is just a basic example showing how to use some of the features available.  Currently, it only shows how ot use the `AutoRegioning` category.
+The included example is nothing special.  It is just a basic example showing how to use some of the features available.  Currently, it only shows how ot use the `ESTBeaconManager+AutoRegioning` and `ESTBeacon+Companion` categories.
 
 Here is a screenshot for the curious:
 
