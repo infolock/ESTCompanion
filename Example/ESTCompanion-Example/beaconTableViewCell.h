@@ -13,5 +13,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *majorLabel;
 @property (nonatomic, weak) IBOutlet UILabel *minorLabel;
 @property (nonatomic, weak) IBOutlet UILabel *proximityLabel;
+@property (nonatomic, weak) IBOutlet UILabel *identifierLabel;
+
+@property (nonatomic, weak) IBOutlet UIImageView *beaconImageView;
 
 @end

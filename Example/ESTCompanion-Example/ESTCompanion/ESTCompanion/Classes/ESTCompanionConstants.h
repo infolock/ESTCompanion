@@ -22,4 +22,6 @@
 #define DEFAULTS_SET(key, value)            [[NSUserDefaults standardUserDefaults] setObject:value forKey:key]
 #define SYNC_DEFAULTS                       [[NSUserDefaults standardUserDefaults] synchronize]
 
+#define DEFAULT_COMPANION_IDENTIFIER           @"estimoteIdentifier"
+
 #define DEBUG_STRING(str)                   [NSString stringWithFormat:@"%s %d %s\n%@", __FILE__, __LINE__, __PRETTY_FUNCTION__, str]

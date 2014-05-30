@@ -9,8 +9,8 @@
 #import "ViewController.h"
 #import "beaconTableViewCell.h"
 
-#import "ESTCompanion.h"
 #import "ESTBeaconManager+AutoRegioning.h"
+#import "ESTBeacon+Companion.h"
 
 static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
@@ -62,7 +62,7 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 #pragma mark -
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80.0f;
+    return 98.0f;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -79,7 +79,12 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
     cell.majorLabel.text = [beacon.major stringValue];
     cell.minorLabel.text = [beacon.minor stringValue];
+
     cell.proximityLabel.text = [[ESTCompanion sharedInstance] stringFromProximity:beacon.proximity];
+
+    // Comes from the companion...
+    cell.identifierLabel.text = [beacon identifier];
+    cell.beaconImageView.tintColor = [beacon color];
 
     return cell;
 }
