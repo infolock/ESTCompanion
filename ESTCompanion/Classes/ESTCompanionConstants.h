@@ -19,9 +19,14 @@
  * Original Source: https://gist.github.com/burczyk/6111139
  */
 
-#define DEFAULTS                            [NSUserDefaults standardUserDefaults]
-#define DEFAULTS_SET(key, value)            [[NSUserDefaults standardUserDefaults] setObject:value forKey:key]
-#define SYNC_DEFAULTS                       [[NSUserDefaults standardUserDefaults] synchronize]
+#define DEFAULTS                          [NSUserDefaults standardUserDefaults]
+#define SYNC_DEFAULTS                     [[NSUserDefaults standardUserDefaults] synchronize]
+
+#define DEFAULTS_SET(key, value)          [[NSUserDefaults standardUserDefaults] setObject:value forKey:key]
+#define DEFAULTS_FOR_KEY(key)             [[NSUserDefaults standardUserDefaults] objectForKey:key]
+
+#define DEFAULTS_SET_BOOL(key, value)     [[NSUserDefaults standardUserDefaults] setBool:value forKey:key]
+#define DEFAULTS_BOOL_FOR_KEY(key)        [[NSUserDefaults standardUserDefaults] boolForKey:key]
 
 #define DEFAULT_COMPANION_IDENTIFIER           @"estimoteIdentifier"
 
