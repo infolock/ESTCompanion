@@ -93,10 +93,6 @@ Here is a screenshot for the curious:
 
 ![ScreenShot 1](/example_ss.png)
 
-
-**Note** The Example shows Major of 1, and Minors of 1,2,3.  This is not a mistake - I actually applied those minors to my beacons while messing around with their SDK.
-
-
 <a name="todos"/>
 # @todo's
 * Establish a good, solid Object Structure and reduce the noise that kind of feels is starting to take shape already.  This will be item #1 when main principals and ideas are realized and established. 
