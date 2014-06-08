@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Jonathon Hibbard. All rights reserved.
 //
 
-@import Foundation;
-
 #import "ESTBeaconDefinitions.h"
 
 @class ESTBeacon;

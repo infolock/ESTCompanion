@@ -162,11 +162,7 @@
                             <constraint firstAttribute="trailing" secondItem="Izw-cv-esN" secondAttribute="trailing" constant="5" id="rut-Uu-YpG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IfJ-f8-Qpm">
-                        <barButtonItem key="rightBarButtonItem" image="settings" id="kbe-4B-dTm">
-                            <color key="tintColor" red="1" green="0.56078433989999998" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="IfJ-f8-Qpm"/>
                     <connections>
                         <outlet property="tableView" destination="gID-i1-vSV" id="zS9-qH-3yr"/>
                         <segue destination="nyj-lH-QAq" kind="push" identifier="details" id="BOC-7i-dd5"/>
