@@ -30,6 +30,8 @@ ESTCompanion
 # Requirements
 [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK) - see their README for installation instructions
 
+Note that you should be using the latest/greatest of this SDK as ESTCompanion should be assumed to run with it as well.
+
 <a name="installation"/>
 # Installation
 Pretty simple stuff: Copy the ESTCompanion folder into your project - and its ready for use.
