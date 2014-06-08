@@ -38,6 +38,7 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
                                                                        delegate:self
                                                                   proximityUUID:ESTIMOTE_PROXIMITY_UUID
                                                                      identifier:DEFAULT_BEACON_IDENTIFIER];
+    self.selectedIndexPath = nil;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -66,7 +67,10 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 #pragma mark -
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+
     self.selectedIndexPath = indexPath;
+    [self performSegueWithIdentifier:@"details" sender:self];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -110,19 +114,18 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
     [beacon setIdentifier:identifier];
 
     [beacon syncChangesToStore];
-
     [self.tableView reloadData];
 }
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
     if( [segue.identifier isEqualToString:@"details"] ) {
+
         DetailTableViewController *detailTableViewController = (DetailTableViewController *)segue.destinationViewController;
 
         ESTBeacon *beacon = self.beacons[(NSUInteger)self.selectedIndexPath.row];
-
-        detailTableViewController.beaconColor = [[beacon beaconColor] hexCodeColor];
-        detailTableViewController.beaconIdentifier = [beacon identifier];
+        detailTableViewController.beacon = beacon;
     }
 }
 

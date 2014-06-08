@@ -69,34 +69,57 @@
 -(void)resetFactorySettingsToBeacon:(ESTBeacon *)beacon withCompletion:(ESTCompletionBlock)block {
 
     beacon.delegate = self;
+
     if( block != nil ) {
         self.connectionBlock = block;
     }
     
+    NSLog( @"Attempting to connnect to beacon.." );
     [beacon connect];
 }
 
 -(void)beaconConnectionDidFail:(ESTBeacon *)beacon withError:(NSError *)error {
-
-    NSLog( @"Attempt to connect to the requested beacon failed!" );
-
     beacon.delegate = nil;
     self.connectionBlock = nil;
+
+    [self alertWithError:error];
 }
 
 -(void)beaconConnectionDidSucceeded:(ESTBeacon *)beacon {
 
     beacon.delegate = nil;
 
+    NSLog( @"Connected to beacon.." );
+
     __weak typeof( self ) weakSelf = self;
     [beacon resetToFactorySettingsWithCompletion:^(NSError *error) {
 
-        if( weakSelf.connectionBlock != nil ) {
-            weakSelf.connectionBlock( error );
+        if( error ) {
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self alertWithError:error];
+            });
+
+        } else {
+            NSLog( @"Complete!" );
+
+            if( weakSelf.connectionBlock != nil ) {
+                weakSelf.connectionBlock( error );
+            }
         }
 
         weakSelf.connectionBlock = nil;
     }];
+}
+
+-(void)alertWithError:(NSError *)error {
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[error localizedFailureReason]
+                                                    message:[error description]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Ok...whatever..."
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 @end
