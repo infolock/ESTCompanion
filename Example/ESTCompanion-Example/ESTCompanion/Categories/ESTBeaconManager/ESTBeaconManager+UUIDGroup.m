@@ -51,10 +51,10 @@ static char kAssociatedRegionKey;
 
 -(instancetype)initWithOptions:(kUUIDGroupInitOptions)initOptions delegate:(id <ESTBeaconManagerDelegate>)delegate groupBy:(kUUIDGroupBy)groupBy sortBy:(kUUIDGroupSortBy)sortBy {
 
-    self = [super init];
+    self = [self init];
 
     if( self ) {
-        [self setDelegate:delegate];
+        self.delegate = delegate;
         [self processInitOptions:initOptions];
     }
 
@@ -98,8 +98,7 @@ static char kAssociatedRegionKey;
     }
 
     NSString *identifier = [uuidIdentifierArray[1] copy];
-    ESTBeaconRegion *region = [[ESTBeaconRegion alloc] initWithProximityUUID:uuidIdentifierArray[0]
-                                                                  identifier: identifier];
+    ESTBeaconRegion *region = [[ESTBeaconRegion alloc] initWithProximityUUID:uuidIdentifierArray[0] identifier: identifier];
     [self setAssociatedRegion:region];
 
     [self startRangingBeaconsInRegion:[self associatedRegion]];

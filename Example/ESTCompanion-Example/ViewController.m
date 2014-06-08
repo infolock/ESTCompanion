@@ -20,6 +20,8 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 @interface ViewController () <ESTBeaconManagerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) ESTBeaconManager *beaconManager;
+@property (nonatomic, strong) ESTBeaconRegion *region;
+
 @property (nonatomic, copy) NSArray *beacons;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
@@ -29,10 +31,9 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
 @implementation ViewController
 
-// Note: ESTBeaconManagerUUIDGroupDelegate used here to range immediately;  otherwise, just use the default ESTBeaconManager
 -(void)viewDidAppear:(BOOL)animated {
-    
     [super viewDidAppear:animated];
+
     self.beaconManager = [[ESTBeaconManager alloc] initAutoRegioningWithOptions:kUUIDGroupInitOptionsAvoidUnknownStateBeacons
                                                                        delegate:self
                                                                   proximityUUID:ESTIMOTE_PROXIMITY_UUID
@@ -58,7 +59,6 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
 -(void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region {
     self.beacons = beacons;
-    [self.tableView reloadData];
 }
 
 #pragma mark -
