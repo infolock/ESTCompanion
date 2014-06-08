@@ -17,7 +17,7 @@ Pretty simple stuff: Copy the ESTCompanion folder into your project - and its re
 
 
 <a name="overview">
-# Overview
+## Overview
 
 > Checkout the Example for a very simple usage example
 
@@ -30,7 +30,7 @@ Pretty simple stuff: Copy the ESTCompanion folder into your project - and its re
 As to not turn this into a Billy Mays infomercial here i'll admit the downside is that there isnt much else yet either.  Its a work in progress though and should grow pretty quickly from here on out. 
 
 <a name="categories"/>
-# Categories
+## Categories
 There also exists a `Misc` folder within `Categories`.  This just contains some UIColor/Tinting manipulation stuff.  Feel free to mess around with it.  Some of it came from another project of mine, a few pieces came also from other repos.
 
 <a name="beaconcomp">
@@ -61,7 +61,7 @@ This Category is influenced by the [iBeacon Article on Ray Wenderlich's site](ht
 > There are a few other categories that are available to be explored in the Misc. folder if interested.
 
 <a name="classes"/>
-# Classes
+## Classes
 <a name="estcompanion"/>
 ### ESTCompanion
 Simple Object at this point.  There are bigger plans for it, but for now,  has a easy to use way of obtaining the string value from a CLProximity =P
@@ -73,7 +73,7 @@ Simple Object at this point.  There are bigger plans for it, but for now,  has a
 Currently holds just a few constants for dealing with User Defaults, logging, and creating string constants.. 
 
 <a name="resources"/>
-# iBeacon-related Information/Resources
+## Additional Information/Resources
 Here is a small compilation of good resources, information and repositories relating to iBeacons.
 
 * [Estimote IOS-SDK](https://github.com/Estimote/iOS-SDK) - github repo
@@ -86,7 +86,7 @@ Here is a small compilation of good resources, information and repositories rela
 
 
 <a name="example"/>
-# Example Code
+## Example Code
 The included example is nothing special.  It is just a basic example showing how to use some of the features available.  Currently, it only shows how ot use the `ESTBeaconManager+AutoRegioning` and `ESTBeacon+Companion` categories.
 
 Here is a screenshot for the curious:
@@ -94,7 +94,7 @@ Here is a screenshot for the curious:
 ![ScreenShot 1](/example_ss.png)
 
 <a name="todos"/>
-# @todo's
+## @todo's
 * Establish a good, solid Object Structure and reduce the noise that kind of feels is starting to take shape already.  This will be item #1 when main principals and ideas are realized and established. 
 * Simplify checking for updates
   * May actually add an option to check for an update every `x` days, or on `z` day of the week.
@@ -109,5 +109,5 @@ Here is a screenshot for the curious:
 
 
 <a name="license"/>
-# License
+## License
 See `LICENSE` included with this repo.  Long story short - I'm a dev, you're a dev - we all make great stuff that works, but we also make shitty stuff that breaks...
