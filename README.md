@@ -6,13 +6,13 @@ ESTCompanion
 ** *NOTE* You will find a version of the EstimoteSDK in both the Companion and the Example folders.  It will eventually be moved to the parent folder.  The main thing to remember is that this is only for development purposes.  Do not depend on this having the latest/greatest version of their SDK.  You should do that on your own, which you can find [here](https://github.com/Estimote/iOS-SDK).**
 
 <a name="requirements"/>
-# Requirements
+## Requirements
 [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK) - see their README for installation instructions
 
 Note that you should be using the latest/greatest of this SDK as ESTCompanion should be assumed to run with it as well.
 
 <a name="installation"/>
-# Installation
+## Installation
 Pretty simple stuff: Copy the ESTCompanion folder into your project - and its ready for use.
 
 
@@ -21,7 +21,6 @@ Pretty simple stuff: Copy the ESTCompanion folder into your project - and its re
 
 > Checkout the Example for a very simple usage example
 
-So what's so special about this?
 * No need for the ESTBeaconRegion property ( see details in sibling points below )
 * No need to create an instance of the ESTBeaconRegion unless you want to
 * Optionally Start Ranging Immediately as you init the ESTBeaconManager
@@ -29,7 +28,6 @@ So what's so special about this?
 * Primary happiness for the lazy people like me - reduces this down to an init, ESTBeaconManagerDelegate method, and then cleanup on destuct.
 
 As to not turn this into a Billy Mays infomercial here i'll admit the downside is that there isnt much else yet either.  Its a work in progress though and should grow pretty quickly from here on out. 
-
 
 <a name="categories"/>
 # Categories
@@ -60,13 +58,7 @@ This category is simply a way to persist iBeacons found/altered during ranging t
 
 This Category is influenced by the [iBeacon Article on Ray Wenderlich's site](http://www.raywenderlich.com/66584/ios7-ibeacons-tutorial).
 
-<a name="othercategories">
-### Others
-There are a few other categories that are available to be explored:  
-* `NSUUID+Utils`
-* `UIColor+Hexcode`
-* `UIImage+RenderingMode` ( and its counterpart class, `ImageViewRenderingMode` )
-
+> There are a few other categories that are available to be explored in the Misc. folder if interested.
 
 <a name="classes"/>
 # Classes
