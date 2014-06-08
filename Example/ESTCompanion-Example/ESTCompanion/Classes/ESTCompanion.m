@@ -59,7 +59,7 @@
  * In the completion block, it will be necessary to reset the object that is desired to be ESTBeaconDelegate to the delegate.
  * The reason is because ESTCompanion will make itself the delegate to handle the connection crap - but once it is complete, it will
  * reset the delegate to nil.  The completion block is therefore the prime opportunity to reset the delegate to another object.
- * 
+ *
  */
 
 -(void)resetFactorySettingsToBeacon:(ESTBeacon *)beacon {
