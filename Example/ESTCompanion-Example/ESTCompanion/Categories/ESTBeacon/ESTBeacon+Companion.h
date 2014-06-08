@@ -10,10 +10,10 @@
 
 @interface ESTBeacon (Companion)
 
--(UIColor *)color;
+-(UIColor *)beaconColor;
 -(NSString *)identifier;
 
--(void)setColor:(UIColor *)color;
+-(void)setBeaconColor:(UIColor *)beaconColor;
 -(void)setIdentifier:(NSString *)identifier;
 
 -(void)syncChangesToStore;

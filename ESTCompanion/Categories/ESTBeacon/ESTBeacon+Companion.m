@@ -23,7 +23,7 @@ static char kAssociatedIdentifierKey;
 #pragma mark -
 
 #pragma mark Color
--(UIColor *)color {
+-(UIColor *)beaconColor {
 
     UIColor *color = [self associatedColor];
     if( !color ) {
@@ -70,8 +70,8 @@ static char kAssociatedIdentifierKey;
 #pragma mark -
 
 #pragma mark Color
--(void)setColor:(UIColor *)color {
-    [self setAssociatedColor:color];
+-(void)setBeaconColor:(UIColor *)beaconColor {
+    [self setAssociatedColor:beaconColor];
 }
 
 -(void)setIdentifier:(NSString *)identifier {
@@ -84,7 +84,7 @@ static char kAssociatedIdentifierKey;
 
 -(void)syncChangesToStore {
 
-    UIColor *color = [self color];
+    UIColor *color = [self beaconColor];
     NSString *identifier = [self identifier];
     NSLog( @"identifier = %@ ", identifier );
 

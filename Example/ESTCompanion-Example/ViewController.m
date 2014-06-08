@@ -92,7 +92,7 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
     // Comes from the companion...
     cell.identifierLabel.text = [beacon identifier];
-    cell.beaconImageView.tintColor = [beacon color];
+    cell.beaconImageView.tintColor = [beacon beaconColor];
 
     return cell;
 }
@@ -106,7 +106,7 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
     NSString *identifier = [detailTableViewController.beaconIdentifier copy];
 
     ESTBeacon *beacon = self.beacons[(NSUInteger)self.selectedIndexPath.row];
-    [beacon setColor:color];
+    [beacon setBeaconColor:color];
     [beacon setIdentifier:identifier];
 
     [beacon syncChangesToStore];
@@ -121,7 +121,7 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
         ESTBeacon *beacon = self.beacons[(NSUInteger)self.selectedIndexPath.row];
 
-        detailTableViewController.beaconColor = [[beacon color] hexCodeColor];
+        detailTableViewController.beaconColor = [[beacon beaconColor] hexCodeColor];
         detailTableViewController.beaconIdentifier = [beacon identifier];
     }
 }
