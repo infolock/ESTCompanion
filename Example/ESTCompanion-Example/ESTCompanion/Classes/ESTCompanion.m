@@ -78,6 +78,11 @@
     [beacon connect];
 }
 
+/**
+ *  Currently, this will actually be what is returned by any attempt to actually "conntect" to an estimote.
+ *  It apperas as though the new SDK requires an App ID and an App Token.  This will be updated once
+ *  it is formally announced as to how these two values are obtained.
+ */
 -(void)beaconConnectionDidFail:(ESTBeacon *)beacon withError:(NSError *)error {
     beacon.delegate = nil;
     self.connectionBlock = nil;
