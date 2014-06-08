@@ -23,19 +23,23 @@
     // Ensure we aren't passing in the startRangingImmediately here as this category will take care of it instead...
     initOptions &= ~kUUIDGroupInitOptionsStartRangingImmediately;
 
-    ESTBeaconManager *beaconManager = [self initWithOptions:initOptions delegate:delegate groupBy:groupBy sortBy:sortBy];
-    if( beaconManager ) {
-        [self startRangingImmediatelyWithProximityUUID:proximityUUID identifier:identifier];
-    }
+    ESTBeaconManager *beaconManager = [self initWithOptions:initOptions
+                                                   delegate:delegate
+                                                    groupBy:groupBy
+                                                     sortBy:sortBy];
+
+    [self startRangingImmediatelyWithProximityUUID:proximityUUID
+                                        identifier:identifier];
 
     return beaconManager;
 }
 
 -(void)startRangingImmediatelyWithProximityUUID:(NSUUID *)proximityUUID identifier:(NSString *)identifier {
 
-    ESTBeaconRegion *region = [[ESTBeaconRegion alloc] initWithProximityUUID:proximityUUID identifier: identifier];
-    [self setAssociatedRegion:region];
+    ESTBeaconRegion *region = [[ESTBeaconRegion alloc] initWithProximityUUID:proximityUUID
+                                                                  identifier:identifier];
 
+    [self setAssociatedRegion:region];
     [self startRangingBeaconsInRegion:region];
 
     NSLog(@"Ranging Started Immediately");
