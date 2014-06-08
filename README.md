@@ -13,7 +13,8 @@ ESTCompanion
 * [ESTBeacon+Companion](#beaconcomp)  
 * [ESTBeaconManager+UUIDGroup](#uuidgroup)  
 * [ESTBeaconManager+AutoRegioning](#autoregion)  
-* [ESTBeaconManager+BeaconStore](#beaconstore)  
+* [ESTCompanion+BeaconStore](#beaconstore)  
+* [Others](#othercategories)  
 
 [Classes](#classes)  
 * [ESTCompanion](#estcompanion)  
@@ -82,7 +83,7 @@ There are (quite a few) initialization points available for this guy too by mean
 Checkout `Categories/ESTBeaconManager+AutoRegioning.h` for more.
 
 <a name="beaconstore"/>
-### ESTBeaconManager+BeaconStore
+### ESTCompanion+BeaconStore
 This category is simply a way to persist iBeacons found/altered during ranging to the `NSUserDefaults`.  The catch 22 to this is that the [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK) already allows you to save that information to the actual iBeacons - which is not what this is attempting to solve/duplicate ( unless you actually want to that is... ).  This is just a easy way to store more information about them.
 
 *This is just a generic first attempt at it - will refactor/expand on this as the use cases arise.  The hope is to allow support to multiple stores ( `NSUserDefaults`, `Core Data`, remote, etc. ).*
@@ -90,7 +91,14 @@ This category is simply a way to persist iBeacons found/altered during ranging t
 This Category is influenced by the [iBeacon Article on Ray Wenderlich's site](http://www.raywenderlich.com/66584/ios7-ibeacons-tutorial).
 
 ##### More Information
-Checkout `Categories/ESTBeaconManager+BeaconStore.h` for more.
+Checkout `Categories/ESTCompanion+BeaconStore.h` for more.
+
+<a name="othercategories">
+### Others
+There are a few other categories that are available to be explored:  
+* `NSUUID+Utils`
+* `UIColor+Hexcode`
+* `UIImage+RenderingMode` ( and its counterpart class, `ImageViewRenderingMode` )
 
 
 <a name="classes"/>
@@ -143,11 +151,11 @@ Here is a screenshot for the curious:
 * Establish a good, solid Object Structure and reduce the noise that kind of feels is starting to take shape already.  This will be item #1 when main principals and ideas are realized and established. 
 * Simplify checking for updates
   * May actually add an option to check for an update every `x` days, or on `z` day of the week.
-* Update Example to show how to use the `BeaconStore` category
+* ~~Update Example to show how to use the `BeaconStore` category~~
 * Ability to define 3 beacons to work as triangulation points
 * Simplify managing the UUID/Minor/Major values
-* Ability to change the "color" of a beacon ( 2 of mine were always showing up as teal - I'll update with my fix for this)
-* Replace the GroupUUIDDelegate with a block (or just add it as an option)
+* ~~Ability to change the "color" of a beacon ( 2 of mine were always showing up as teal - I'll update with my fix for this)~~
+* ~~Replace the GroupUUIDDelegate with a block (or just add it as an option)~~
 * Add block support to some other things
 * Add background routines for doing some work ( like updates and whatever ) with a single line.
 * etc. etc.  that's enough as to not overwhelm myself for now.
