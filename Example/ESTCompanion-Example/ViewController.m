@@ -11,9 +11,7 @@
 #import "DetailTableViewController.h"
 
 #import "ESTBeaconManager+AutoRegioning.h"
-#import "ESTBeacon+Companion.h"
-
-#import "UIColor+Hexcode.h"
+#import "UIColor+Hexcode.h" // Needed just to convert the hexcode for a beacon to a UIColor ( and vice versa )
 
 static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 
