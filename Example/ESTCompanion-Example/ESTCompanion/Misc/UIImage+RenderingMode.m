@@ -8,7 +8,7 @@
 
 #import "UIImage+RenderingMode.h"
 
-@implementation UIImage (RenderingMode)
+@implementation UIImage ( RenderingMode )
 
 +(UIImage *)imageWithRenderingMode:(NSString *)imageName {
     return [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];

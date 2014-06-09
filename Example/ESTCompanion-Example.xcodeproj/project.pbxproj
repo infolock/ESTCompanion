@@ -32,6 +32,7 @@
 		0546E5D21936E92000EFDF9F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5D11936E92000EFDF9F /* CoreLocation.framework */; };
 		0546E5D41936E92B00EFDF9F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546E5D31936E92B00EFDF9F /* CoreBluetooth.framework */; };
 		0546E5D71936ED8900EFDF9F /* beaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */; };
+		39848AE515C6846FAF0E64B1 /* UIAlertView+ESTCompanion.m in Sources */ = {isa = PBXBuildFile; fileRef = 39848C4B8B73EA327C863CA9 /* UIAlertView+ESTCompanion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,8 @@
 		0546E5D31936E92B00EFDF9F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		0546E5D51936ED8900EFDF9F /* beaconTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beaconTableViewCell.h; sourceTree = "<group>"; };
 		0546E5D61936ED8900EFDF9F /* beaconTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = beaconTableViewCell.m; sourceTree = "<group>"; };
+		39848B0B584F4D1895D86AA7 /* UIAlertView+ESTCompanion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+ESTCompanion.h"; sourceTree = "<group>"; };
+		39848C4B8B73EA327C863CA9 /* UIAlertView+ESTCompanion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+ESTCompanion.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				0518DAB81938F2A600DE4BD9 /* UIColor+Hexcode.m */,
 				0518DAB91938F2A600DE4BD9 /* UIImage+RenderingMode.h */,
 				0518DABA1938F2A600DE4BD9 /* UIImage+RenderingMode.m */,
+				39848C4B8B73EA327C863CA9 /* UIAlertView+ESTCompanion.m */,
+				39848B0B584F4D1895D86AA7 /* UIAlertView+ESTCompanion.h */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				0518DABE1938F2A600DE4BD9 /* ESTBeaconManager+UUIDGroup.m in Sources */,
 				0518DABB1938F2A600DE4BD9 /* ESTBeacon+Companion.m in Sources */,
 				0546E5901936E56200EFDF9F /* main.m in Sources */,
+				39848AE515C6846FAF0E64B1 /* UIAlertView+ESTCompanion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

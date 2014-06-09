@@ -14,9 +14,13 @@
 
 +(instancetype)sharedInstance;
 
+/**
+ * Easy way to get the string representation of a given proximity
+ */
 -(NSString *)stringFromProximity:(NSInteger)proximity;
 
 /**
+ *
  * >>> WARNING <<<
  * Running resetFactorySettingsToBeacon will - well, reset your beacon's Settings ( ProximityUUID, Minor, Major, etc. ) to
  * the Factory Setting Defaults.  It should be treated like a rock - it has no eyes, heart or soul, so only use it if you mean to.
@@ -28,6 +32,7 @@
  * The reason is because ESTCompanion will make itself the delegate to handle the connection crap - but once it is complete, it will
  * reset the delegate to nil.  The completion block is therefore the prime opportunity to reset the delegate to another object.
  *
+ * @todo - this should be split out into its own category/subclass, or at least the sharedInstance (above) removed...
  */
 -(void)resetFactorySettingsToBeacon:(ESTBeacon *)beacon;
 -(void)resetFactorySettingsToBeacon:(ESTBeacon *)beacon withCompletion:(ESTCompletionBlock)block;

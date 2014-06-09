@@ -34,10 +34,10 @@ static NSString * const DEFAULT_BEACON_IDENTIFIER = @"estimoteIdentifier";
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    self.beaconManager = [[ESTBeaconManager alloc] initAutoRegioningWithOptions:kUUIDGroupInitOptionsAvoidUnknownStateBeacons
-                                                                       delegate:self
-                                                                  proximityUUID:ESTIMOTE_PROXIMITY_UUID
-                                                                     identifier:DEFAULT_BEACON_IDENTIFIER];
+    self.beaconManager = [[ESTBeaconManager alloc] initWithOptions:kUUIDGroupInitOptionsAvoidUnknownStateBeacons
+                                                          delegate:self
+                                                     proximityUUID:ESTIMOTE_PROXIMITY_UUID
+                                                        identifier:DEFAULT_BEACON_IDENTIFIER];
     self.selectedIndexPath = nil;
 }
 

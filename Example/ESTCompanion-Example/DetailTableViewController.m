@@ -12,9 +12,10 @@
 #import "ESTCompanion.h"
 #import "ESTBeacon+Companion.h"
 
+#import "UIAlertView+ESTCompanion.h"
 #import "UIColor+Hexcode.h"
 
-@interface DetailTableViewController () <UIAlertViewDelegate>
+@interface DetailTableViewController ()
 
 @property (nonatomic, weak) IBOutlet UITextField *identifierTextField;
 @property (nonatomic, weak) IBOutlet UIButton *purpleBeaconColorBtn;
@@ -54,22 +55,22 @@
 
 -(IBAction)resetSettingsToFactoryDefaultsBtnTapped:(id)sender {
 
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reset Settings to Factory Defaults?"
-                                                    message:@"Warning - There is no going back if you decide to do this!"
-                                                   delegate:self
-                                          cancelButtonTitle:@"Cancel"
-                                          otherButtonTitles:@"Do it!", nil];
+    [UIAlertView showAlertWithTitle:@"Test" message:@"TEST" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+//    [UIAlertView showAlertWithTitle:@"Reset Settings"
+//                            message:@"Warning: There is no going back if you decide to do this!"
+//                cancelBtnCompletion:nil
+//                  cancelButtonTitle:@"Cancel"
+//                 otherBtnCompletion:^{
+//                    NSLog( @"Resetting beacon settings to factory defaults!" );
+//
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        [[ESTCompanion sharedInstance] resetFactorySettingsToBeacon:self.beacon];
+//
+//                    });
+//                }
+//                otherButtonTitles:@"Do it!", nil];
 
-    [alert show];
-}
 
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if( buttonIndex == 0 ) {
-        return;
-    }
-
-    NSLog( @"Resetting beacon settings to factory defaults!" );
-    [[ESTCompanion sharedInstance] resetFactorySettingsToBeacon:self.beacon];
 }
 
 @end

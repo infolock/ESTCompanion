@@ -8,6 +8,7 @@
 
 #import "ESTCompanion.h"
 #import "ESTBeacon.h"
+#import "UIAlertView+ESTCompanion.h"
 
 @interface ESTCompanion() <ESTBeaconDelegate>
 
@@ -117,14 +118,27 @@
     }];
 }
 
--(void)alertWithError:(NSError *)error {
+//- (void)postLocalNotification:(BWLocalNotificationMessage)localNotificationMessage {
+//
+//    UILocalNotification *notification = [[UILocalNotification alloc] init];
+//    notification.userInfo = @{@"identifier": self.beaconRegion.identifier};
+//    notification.soundName = @"Default";
+//
+//    if (localNotificationMessage == BWLocalNotificationMessageBeaconApproached) {
+//        notification.alertBody = @"Welcome home. Do you need to open your door?";
+//    } else if (localNotificationMessage == BWLocalNotificationMessageBeaconDistanced) {
+//        notification.alertBody = @"Don't forget to close your door!";
+//    }
+//
+//    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+//
+//}
 
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[error localizedFailureReason]
-                                                    message:[error description]
-                                                   delegate:nil
-                                          cancelButtonTitle:@"Ok...whatever..."
-                                          otherButtonTitles:nil];
-    [alert show];
+-(void)alertWithError:(NSError *)error {
+    [UIAlertView showAlertWithError:error
+                           delegate:nil
+                  cancelButtonTitle:@"OK"
+                  otherButtonTitles:nil];
 }
 
 @end

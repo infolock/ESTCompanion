@@ -8,7 +8,7 @@
 
 #import "UIColor+Hexcode.h"
 
-@implementation UIColor (Hexcode)
+@implementation UIColor ( Hexcode )
 
 /**
  * This is some code I wrote for an app a buddy of mine and I work on from time to time called eLBee.
