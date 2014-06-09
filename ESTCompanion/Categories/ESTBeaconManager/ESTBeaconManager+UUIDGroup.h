@@ -10,7 +10,7 @@
 
 #import "ESTBeaconManager.h"
 #import "ESTCompanion.h"
-
+#import "ESTBeacon+Companion.h"
 /**
  * The callee must be this type of delegate if they wish to use the Start Ranging Immediately init option...
  */
