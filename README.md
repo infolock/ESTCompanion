@@ -13,7 +13,10 @@ Note that you should be using the latest/greatest of this SDK as ESTCompanion sh
 
 <a name="installation"/>
 ## Installation
-Pretty simple stuff: Copy the ESTCompanion folder into your project - and its ready for use.
+Pretty simple stuff: 
+
+* Make sure to install the latest Estimote iOS SDK
+* Copy the ESTCompanion folder into your project - and its ready for use.
 
 
 <a name="overview">
@@ -95,6 +98,8 @@ Here is a screenshot for the curious:
 
 <a name="todos"/>
 ## @todo's
+* Update the DetailViewController in the Example to reduce the number of imports needed.
+  * This may also require some refactoring of the other imports and the order of those imports.
 * Establish a good, solid Object Structure and reduce the noise that kind of feels is starting to take shape already.  This will be item #1 when main principals and ideas are realized and established. 
 * Simplify checking for updates
   * May actually add an option to check for an update every `x` days, or on `z` day of the week.
