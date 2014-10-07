@@ -1,6 +1,11 @@
 ESTCompanion
 ============
 
+![Unmaintained](https://img.shields.io/badge/%E2%9A%A0-unmaintained-red.svg?style=flat)
+> This repo is now unmaintained.  When I have time, I may bring this back to life by replacing it with a SWIFT solution I wrote 
+> instead.  whenever I have time to make that code public-ready, I'll update.  Til then - consider this code very out-dated
+> and unmaintained.  Thanks for your interest!
+
 (WIP) - Finding there are some boiler plate setup stuff for working with [Estimote's iOS SDK](https://github.com/Estimote/iOS-SDK).  To make life easier, created some ways to avoid all the boiler plate setup.
 
 ** *NOTE* You will find a version of the EstimoteSDK in both the Companion and the Example folders.  It will eventually be moved to the parent folder.  The main thing to remember is that this is only for development purposes.  Do not depend on this having the latest/greatest version of their SDK.  You should do that on your own, which you can find [here](https://github.com/Estimote/iOS-SDK).**
